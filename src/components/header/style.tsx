@@ -31,7 +31,7 @@ export const Search = styled.div`
   overflow-x: hidden;
   input {
     margin-left: 19px;
-    max-width: 308px;
+    max-width: 21vw;
     width: 100%;
     border-bottom: 0.5px solid #7d7d7d;
     padding-bottom: 4px;
