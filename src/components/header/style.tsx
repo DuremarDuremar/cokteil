@@ -36,7 +36,7 @@ export const Search = styled.div`
     border-bottom: 0.5px solid #7d7d7d;
     padding-bottom: 4px;
     color: #7d7d7d;
-    background: #fffdf5;
+    background-color: #fffdf5;
     font-size: 12px;
     font-family: Roboto;
     font-weight: 100;
