@@ -65,4 +65,5 @@ export const Content = styled.div`
   padding: 0 8.9%;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  background: #fffdf5;
 `;

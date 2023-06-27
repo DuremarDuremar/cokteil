@@ -1,8 +1,27 @@
 import React from "react";
-import { Content } from "./style";
+import { ReactComponent as SvgBurger } from "../../assets/menu.svg";
+import { ReactComponent as SvgSearch } from "../../assets/search.svg";
+import { ReactComponent as SvgAvatar } from "../../assets/avatar.svg";
+import { ReactComponent as SvgShop } from "../../assets/shopping.svg";
+import { Burger, Content, Avatar, Search, Shop } from "./style";
 
 const Header = () => {
-  return <Content>Header</Content>;
+  return (
+    <Content>
+      <Burger>
+        <SvgBurger />
+      </Burger>
+      <Search>
+        <SvgSearch />
+      </Search>
+      <Avatar>
+        <SvgAvatar />
+      </Avatar>
+      <Shop>
+        <SvgShop />
+      </Shop>
+    </Content>
+  );
 };
 
 export default Header;
