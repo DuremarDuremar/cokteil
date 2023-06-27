@@ -13,6 +13,7 @@ const Header = () => {
       </Burger>
       <Search>
         <SvgSearch />
+        <input type="text" placeholder="Поиск" />
       </Search>
       <Avatar>
         <SvgAvatar />
