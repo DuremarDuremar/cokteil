@@ -58,4 +58,11 @@ img {
 }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  max-width: 1440px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0 8.9%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+`;
