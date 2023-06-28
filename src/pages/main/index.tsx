@@ -1,5 +1,5 @@
 import React from "react";
-import { Welcome, Advantage } from "../../components";
+import { Welcome, Advantage, Stock } from "../../components";
 import { Content } from "./style";
 
 const Main = () => {
@@ -7,6 +7,7 @@ const Main = () => {
     <Content>
       <Welcome />
       <Advantage />
+      <Stock />
     </Content>
   );
 };

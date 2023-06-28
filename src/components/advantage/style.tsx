@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  /* background: lightgray; */
   margin-right: 11vw;
   margin-top: 11vw;
 `;
@@ -26,7 +25,6 @@ export const Grid = styled.div`
 export const Item = styled.div<{
   area: string;
 }>`
-  /* border: 1px solid black; */
   grid-area: ${(props) => props.area};
   p {
     color: #7d7d7d;
