@@ -1,11 +1,12 @@
 import React from "react";
-import Welcome from "../../components/welcome";
+import { Welcome, Advantage } from "../../components";
 import { Content } from "./style";
 
 const Main = () => {
   return (
     <Content>
       <Welcome />
+      <Advantage />
     </Content>
   );
 };
