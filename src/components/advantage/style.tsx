@@ -33,5 +33,79 @@ export const Item = styled.div<{
     font-size: 14px;
     line-height: 118%;
     max-width: 184px;
+    position: relative;
   }
+
+  ${(props) =>
+    props.area === "a" &&
+    `
+    p {
+      :before {
+      content: "";
+      display:block;
+      position: absolute;
+      right:2vw;
+      bottom:-25px;
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      background: #514A7E;
+      box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.40);  
+    }    
+    `}
+  ${(props) =>
+    props.area === "c" &&
+    `
+    p {
+      :before {
+      content: "";
+      display:block;
+      position: absolute;
+      right:-50px;
+      top:-30px;
+      width: 47px;
+      height: 47px;
+      border-radius: 47px;
+      background: #514A7E;
+      box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.40);  
+    }    
+    `}
+
+  ${(props) =>
+    props.area === "z" &&
+    `
+        margin: 0px auto;
+    p {
+      :before {
+      content: "";
+      display:block;
+      position: absolute;
+      right:-30px;
+      bottom:-25px;
+      width: 47px;
+      height: 47px;
+      border-radius: 47px;
+      background: #514A7E;
+      box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.40);  
+    }    
+    `}
+  ${(props) =>
+    props.area === "x" &&
+    `
+        margin: 0px auto;
+    p {
+      :before {
+      content: "";
+      display:block;
+      position: absolute;
+      right:-8px;
+      top:-27px;
+      width: 28px;
+      height: 28px;
+      border-radius: 28px;
+      background: #514A7E;
+      box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.40);  
+    }    
+}
+    `}
 `;
