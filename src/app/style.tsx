@@ -67,4 +67,5 @@ export const Content = styled.div`
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   background: #fffdf5;
+  color: #121212;
 `;

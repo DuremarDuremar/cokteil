@@ -32,7 +32,6 @@ export const WelcomeTop = styled.div`
     }
   }
   h2 {
-    color: #121212;
     font-size: 60px;
     font-weight: 300;
     line-height: 115%;
