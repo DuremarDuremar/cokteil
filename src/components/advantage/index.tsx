@@ -19,7 +19,7 @@ const Advantage = () => {
       <Grid>
         {Items.map((item) => (
           <Item key={item[0]} area={item[0]}>
-            {item[1]}
+            <p>{item[1]}</p>
           </Item>
         ))}
       </Grid>
