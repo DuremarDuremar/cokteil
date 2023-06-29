@@ -28,4 +28,20 @@ export const Title = styled.div`
 
 export const Wrapper = styled.div`
   margin-top: 8vw;
+  position: relative;
+  > div {
+    width: 111%;
+  }
+
+  ul {
+  }
+  li {
+    max-width: 278px;
+    height: 319px;
+    width: 100%;
+    background-size: cover;
+  }
+  li:not(:first-child) {
+    margin-left: 80px;
+  }
 `;

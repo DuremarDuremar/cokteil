@@ -17,33 +17,41 @@ const items = [
     <img src={lot_1} onDragStart={handleDragStart} role="presentation" />
   </div>,
   <div className="item" data-value="2">
-    <img src={lot_2} onDragStart={handleDragStart} role="presentation" />
-  </div>,
-  <div className="item" data-value="3">
     <img src={lot_3} onDragStart={handleDragStart} role="presentation" />
   </div>,
-  <div className="item" data-value="4">
-    <img src={lot_4} onDragStart={handleDragStart} role="presentation" />
-  </div>,
-  <div className="item" data-value="5">
+  <div className="item" data-value="3">
     <img src={lot_5} onDragStart={handleDragStart} role="presentation" />
   </div>,
-  <div className="item" data-value="6">
+  <div className="item" data-value="4">
     <img src={lot_6} onDragStart={handleDragStart} role="presentation" />
+  </div>,
+  <div className="item" data-value="5">
+    <img src={lot_2} onDragStart={handleDragStart} role="presentation" />
+  </div>,
+  <div className="item" data-value="6">
+    <img src={lot_4} onDragStart={handleDragStart} role="presentation" />
   </div>,
 ];
 
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1024: { items: 3 },
+  1024: {
+    items: 3,
+    itemsFit: "contain",
+  },
 };
 
 const Stock = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const slidePrev = () => setActiveIndex(activeIndex - 1);
-  const slideNext = () => setActiveIndex(activeIndex + 1);
-  const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
+  const slidePrev = () => setActiveIndex(activeIndex > 0 ? activeIndex - 1 : 0);
+  const slideNext = () =>
+    setActiveIndex(
+      activeIndex < items.length - 1 ? activeIndex + 1 : items.length
+    );
+  // const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
+
+  // console.log(activeIndex);
 
   return (
     <Content>
@@ -54,17 +62,21 @@ const Stock = () => {
         <AliceCarousel
           mouseTracking
           items={items}
-          paddingLeft={50}
-          paddingRight={50}
+          // paddingLeft={50}
+          // paddingRight={50}
           responsive={responsive}
           activeIndex={activeIndex}
-          onSlideChanged={syncActiveIndex}
+          // onSlideChanged={syncActiveIndex}
           // infinite
           disableButtonsControls={true}
           disableDotsControls={true}
         />
-        <button onClick={slidePrev}>Prev...............</button>
-        <button onClick={slideNext}>Next.........</button>
+        {activeIndex > 0 && (
+          <button onClick={slidePrev}>Prev...............</button>
+        )}
+        {activeIndex < items.length - 3 && (
+          <button onClick={slideNext}>Next.........</button>
+        )}
       </Wrapper>
     </Content>
   );
