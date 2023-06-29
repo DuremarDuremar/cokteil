@@ -26,6 +26,6 @@ export const Title = styled.div`
   }
 `;
 
-export const Slider = styled.div`
+export const Wrapper = styled.div`
   margin-top: 8vw;
 `;
