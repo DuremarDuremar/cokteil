@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import { Content, Title, Wrapper } from "./style";
+import { Content, Title, Wrapper, ButtonSlider } from "./style";
+import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 import lot_1 from "../../assets/lot1.png";
 import lot_2 from "../../assets/lot2.png";
 import lot_3 from "../../assets/lot3.png";
@@ -47,9 +48,9 @@ const Stock = () => {
   const slidePrev = () => setActiveIndex(activeIndex > 0 ? activeIndex - 1 : 0);
   const slideNext = () =>
     setActiveIndex(
-      activeIndex < items.length - 1 ? activeIndex + 1 : items.length
+      activeIndex < items.length - 3 ? activeIndex + 1 : items.length
     );
-  // const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
+  const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
 
   // console.log(activeIndex);
 
@@ -62,20 +63,21 @@ const Stock = () => {
         <AliceCarousel
           mouseTracking
           items={items}
-          // paddingLeft={50}
-          // paddingRight={50}
           responsive={responsive}
           activeIndex={activeIndex}
-          // onSlideChanged={syncActiveIndex}
-          // infinite
+          onSlideChanged={syncActiveIndex}
           disableButtonsControls={true}
           disableDotsControls={true}
         />
         {activeIndex > 0 && (
-          <button onClick={slidePrev}>Prev...............</button>
+          <ButtonSlider onClick={slidePrev} prev>
+            <SvgArrow />
+          </ButtonSlider>
         )}
         {activeIndex < items.length - 3 && (
-          <button onClick={slideNext}>Next.........</button>
+          <ButtonSlider onClick={slideNext}>
+            <SvgArrow />
+          </ButtonSlider>
         )}
       </Wrapper>
     </Content>
