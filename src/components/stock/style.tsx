@@ -36,7 +36,6 @@ export const Wrapper = styled.div`
     max-width: 278px;
     width: 100%;
     background-size: cover;
-    box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.2);
   }
   li:not(:first-child) {
     margin-left: 80px;

@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 export const Content = styled.div``;
 
-export const Foto = styled.div``;
+export const Foto = styled.div`
+  img {
+    box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.2);
+  }
+`;
 
 export const Details = styled.div`
-  height: 81px;
+  /* height: 81px; */
   display: flex;
 `;
 export const Info = styled.div`
@@ -27,6 +31,26 @@ export const Info = styled.div`
   span {
     font-weight: 300;
     padding-left: 23px;
+  }
+  button {
+    max-width: 148px;
+    width: 100%;
+    height: 37px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 15px;
+    border: 0.5px solid #121212;
+  }
+  div:last-child {
+    position: relative;
+    svg {
+      position: absolute;
+      fill: #514a7e;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 `;
 export const Buy = styled.div`

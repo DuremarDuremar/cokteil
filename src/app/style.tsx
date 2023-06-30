@@ -34,6 +34,7 @@ ul li {
 button {
   outline: none;
   cursor: pointer;
+  background-color: inherit
 }
 input{
   outline: none;

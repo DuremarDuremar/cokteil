@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { ReactComponent as SvgShop } from "../../assets/shopping.svg";
+import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
 import { Content, Foto, Details, Buy, Info } from "./style";
 
 interface IProps {
@@ -30,6 +31,7 @@ const Card: FC<IProps> = ({ lot, index }) => {
           </div>
           <div>
             <button>Подробнее</button>
+            <SvgArrow />
           </div>
         </Info>
         <Buy>
