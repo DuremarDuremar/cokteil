@@ -60,7 +60,7 @@ export const ButtonSlider = styled.button<{
     props.prev &&
     `
     left:0%;
-    bottom: 5%;
+    bottom: 24%;
     svg{
       transform:rotate(180deg);
     }
@@ -69,7 +69,7 @@ export const ButtonSlider = styled.button<{
     !props.prev &&
     `
   right:-11%;
-  bottom: 5%;
+  bottom: 24%;
     `}
 &:hover {
     background: #514a7e;

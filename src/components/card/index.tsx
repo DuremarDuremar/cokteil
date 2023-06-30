@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { Content, Foto, Details, Buy } from "./style";
+import { ReactComponent as SvgShop } from "../../assets/shopping.svg";
+import { Content, Foto, Details, Buy, Info } from "./style";
 
 interface IProps {
   lot: string;
@@ -19,8 +20,22 @@ const Card: FC<IProps> = ({ lot, index }) => {
           alt="img"
         />
       </Foto>
-      <Buy>1hhhhhhhhhhhhh</Buy>
-      <Details>3ggggggggggggggg</Details>
+      <Details>
+        <Info>
+          <div>
+            50.00 р <span>65.00 р</span>
+          </div>
+          <div>
+            <p>Блузка женская классная</p>
+          </div>
+          <div>
+            <button>Подробнее</button>
+          </div>
+        </Info>
+        <Buy>
+          <SvgShop />
+        </Buy>
+      </Details>
     </Content>
   );
 };

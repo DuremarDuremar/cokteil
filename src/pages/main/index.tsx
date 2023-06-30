@@ -8,31 +8,8 @@ import lot_4 from "../../assets/lot4.png";
 import lot_5 from "../../assets/lot5.png";
 import lot_6 from "../../assets/lot6.png";
 
-const handleDragStart = (e: any) => e.preventDefault();
-
-// const items = [
-//   <div className="item" data-value="1">
-//     <img src={lot_1} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-//   <div className="item" data-value="2">
-//     <img src={lot_3} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-//   <div className="item" data-value="3">
-//     <img src={lot_5} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-//   <div className="item" data-value="4">
-//     <img src={lot_6} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-//   <div className="item" data-value="5">
-//     <img src={lot_2} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-//   <div className="item" data-value="6">
-//     <img src={lot_4} onDragStart={handleDragStart} role="presentation" />
-//   </div>,
-// ];
-
 const items = [lot_1, lot_3, lot_5, lot_6, lot_2, lot_4].map((item, index) => {
-  return <Card lot={item} index={index} />;
+  return <Card lot={item} index={index} key={index} />;
 });
 
 const Main = () => {
