@@ -31,7 +31,19 @@ export const Info = styled.div`
   span {
     font-weight: 300;
     padding-left: 23px;
+    position: relative;
+    :before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #514a7e;
+      width: 62px;
+      height: 0.5px;
+      top: 50%;
+      right: -20%;
+    }
   }
+
   button {
     max-width: 148px;
     width: 100%;
@@ -41,15 +53,27 @@ export const Info = styled.div`
     text-align: left;
     padding-left: 15px;
     border: 0.5px solid #121212;
+    transition: all 0.7s ease-in-out;
   }
+
   div:last-child {
     position: relative;
+
     svg {
       position: absolute;
       fill: #514a7e;
       right: 10%;
       top: 50%;
       transform: translateY(-50%);
+      transition: all 1s ease-in-out;
+    }
+    &:hover {
+      button {
+        background: #514a7e;
+      }
+      svg {
+        fill: #fffdf5;
+      }
     }
   }
 `;
