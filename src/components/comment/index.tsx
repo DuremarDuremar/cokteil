@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Content } from "./style";
+import { Content, Foto, Info } from "./style";
 
 export interface IComment {
   name: string;
@@ -15,17 +15,17 @@ interface IProps {
 
 const Comment: FC<IProps> = ({ item, index }) => {
   return (
-    <Content key={index}>
-      <div>
+    <Content>
+      <Foto>
+        <img src={item.img} alt="img" />
+      </Foto>
+      <Info>
+        <p>{item.text}</p>
         <div>
-          <img src={item.img} alt="img" />
+          <h5>{item.name}</h5>
+          <span>{item.data}</span>
         </div>
-        <div>
-          <div>{item.text}</div>
-          <div>{item.name}</div>
-          <div>{item.data}</div>
-        </div>
-      </div>
+      </Info>
     </Content>
   );
 };

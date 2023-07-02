@@ -60,16 +60,18 @@ export const Info = styled.div`
     position: relative;
 
     svg {
+      width: 26px;
+      height: 4px;
       position: absolute;
       fill: #514a7e;
       right: 10%;
       top: 50%;
       transform: translateY(-50%);
-      transition: all 1s ease-in-out;
     }
     &:hover {
       button {
         background: #514a7e;
+        color: #fffdf5;
       }
       svg {
         fill: #fffdf5;
