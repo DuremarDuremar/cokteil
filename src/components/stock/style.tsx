@@ -32,6 +32,9 @@ export const Wrapper = styled.div`
   > div {
     width: 111%;
   }
+  ul {
+    margin-left: 5px;
+  }
   li {
     max-width: 278px;
     width: 100%;

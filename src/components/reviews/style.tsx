@@ -27,6 +27,19 @@ export const Wrapper = styled.div`
 
 export const AddReview = styled.div`
   margin-top: 30px;
+  button {
+    width: 148px;
+    height: 37px;
+    border: 0.5px solid #514a7e;
+    background: #514a7e;
+    color: #fffdf5;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.4s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export const ButtonSlider = styled.button<{
@@ -35,8 +48,9 @@ export const ButtonSlider = styled.button<{
   width: 92px;
   height: 92px;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
   border: 1px solid #514a7e;
   border-radius: 50%;
   transition: all 0.7s ease-in-out;
