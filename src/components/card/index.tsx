@@ -12,14 +12,14 @@ const handleDragStart = (e: any) => e.preventDefault();
 
 const Card: FC<IProps> = ({ lot, index }) => {
   return (
-    <Content>
-      <Foto className="item" data-value={String(index)}>
-        <img
-          src={lot}
-          onDragStart={handleDragStart}
-          role="presentation"
-          alt="img"
-        />
+    <Content
+      onDragStart={handleDragStart}
+      role="presentation"
+      className="item"
+      data-value={String(index)}
+    >
+      <Foto>
+        <img src={lot} alt="img" />
       </Foto>
       <Details>
         <Info>

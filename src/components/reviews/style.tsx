@@ -4,13 +4,30 @@ export const Content = styled.div`
   margin-top: 8vw;
 `;
 
-export const Title = styled.div``;
-
-export const Wrapper = styled.div`
-  position: relative;
+export const Title = styled.div`
+  h3 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 87.305%;
+  }
 `;
 
-export const AddReview = styled.div``;
+export const Wrapper = styled.div`
+  margin-top: calc(5vw + 10px);
+  position: relative;
+
+  ul {
+    margin-left: 15px;
+  }
+
+  /* li:not(:first-child) {
+    margin-left: 20px;
+  } */
+`;
+
+export const AddReview = styled.div`
+  margin-top: 30px;
+`;
 
 export const ButtonSlider = styled.button<{
   prev?: boolean;

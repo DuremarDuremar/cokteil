@@ -13,7 +13,7 @@ const responsive = {
   568: { items: 1 },
   1000: {
     items: 2,
-    itemsFit: "contain",
+    // itemsFit: "contain",
   },
 };
 
@@ -28,7 +28,9 @@ const Reviews: FC<IProps> = ({ items }) => {
 
   return (
     <Content>
-      <Title>Отзывы наших покупателей</Title>
+      <Title>
+        <h3>Отзывы наших покупателей</h3>{" "}
+      </Title>
       <Wrapper>
         <AliceCarousel
           animationDuration={1200}

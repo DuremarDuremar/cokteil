@@ -13,9 +13,16 @@ interface IProps {
   index: number;
 }
 
+const handleDragStart = (e: any) => e.preventDefault();
+
 const Comment: FC<IProps> = ({ item, index }) => {
   return (
-    <Content>
+    <Content
+      onDragStart={handleDragStart}
+      role="presentation"
+      className="item"
+      data-value={String(index)}
+    >
       <Foto>
         <img src={item.img} alt="img" />
       </Foto>
