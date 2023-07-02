@@ -13,7 +13,7 @@ export const Title = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  margin-top: calc(5vw + 10px);
+  margin-top: 6vw;
   position: relative;
 
   ul {

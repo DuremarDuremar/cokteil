@@ -6,6 +6,7 @@ import {
   Card,
   Reviews,
   Comment,
+  Accordion,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
@@ -64,6 +65,7 @@ const Main = () => {
       <Advantage />
       <Stock items={cards} />
       <Reviews items={comments} />
+      <Accordion />
     </Content>
   );
 };
