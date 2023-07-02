@@ -1,6 +1,14 @@
 import React from "react";
-import { Welcome, Advantage, Stock, Card, Reviews } from "../../components";
+import {
+  Welcome,
+  Advantage,
+  Stock,
+  Card,
+  Reviews,
+  Comment,
+} from "../../components";
 import { Content } from "./style";
+import { IComment } from "../../components/comment";
 import lot_1 from "../../assets/lot1.png";
 import lot_2 from "../../assets/lot2.png";
 import lot_3 from "../../assets/lot3.png";
@@ -45,19 +53,8 @@ const comments = [
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos doloremque laboriosam, itaque corrupti facilis hic sint eligendi, explicabo, commodi et aut ad sed amet magni ea unde adipisci voluptatem ipsam ut tempora dolores? Quod tempora corrupti dolore error consequatur facere quia quisquam placeat minus, at commodi aliquam tempore ratione! Quos enim rem officia fugit iure! Nostrum iusto magnam hic unde perspiciatis animi repellat sint dignissimos.",
     data: "27.05.2021",
   },
-].map((item: any, index: number) => {
-  return (
-    <div>
-      <div>
-        <img src={item.img} alt="img" />
-      </div>
-      <div>
-        <div>{item.text}</div>
-        <div>{item.name}</div>
-        <div>{item.data}</div>
-      </div>
-    </div>
-  );
+].map((item: IComment, index: number) => {
+  return <Comment item={item} index={index} key={index} />;
 });
 
 const Main = () => {
