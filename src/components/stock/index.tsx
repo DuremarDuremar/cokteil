@@ -35,6 +35,7 @@ const Stock: FC<IProps> = ({ items }) => {
       <Wrapper>
         <AliceCarousel
           mouseTracking
+          animationDuration={800}
           items={items}
           responsive={responsive}
           activeIndex={activeIndex}

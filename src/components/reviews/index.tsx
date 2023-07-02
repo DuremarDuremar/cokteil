@@ -11,7 +11,7 @@ interface IProps {
 const responsive = {
   0: { items: 1 },
   568: { items: 1 },
-  1300: {
+  1000: {
     items: 2,
     itemsFit: "contain",
   },
@@ -21,23 +21,29 @@ const Reviews: FC<IProps> = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
 
-  console.log("activeIndex", activeIndex);
+  const slideNext = () =>
+    setActiveIndex(activeIndex < items.length - 2 ? activeIndex + 2 : 0);
+
+  console.log(activeIndex, "activeIndex");
 
   return (
     <Content>
       <Title>Отзывы наших покупателей</Title>
       <Wrapper>
         <AliceCarousel
-          animationType="fadeout"
-          animationDuration={800}
-          disableButtonsControls
-          infinite
+          animationDuration={1200}
+          disableButtonsControls={true}
+          disableDotsControls={true}
           items={items}
           mouseTracking
           responsive={responsive}
+          activeIndex={activeIndex}
           onSlideChanged={syncActiveIndex}
         />
-        <ButtonSlider>
+        <ButtonSlider
+          onClick={slideNext}
+          prev={activeIndex >= items.length - 2 ? true : false}
+        >
           <SvgArrow />
         </ButtonSlider>
       </Wrapper>

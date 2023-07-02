@@ -12,7 +12,9 @@ export const Wrapper = styled.div`
 
 export const AddReview = styled.div``;
 
-export const ButtonSlider = styled.button`
+export const ButtonSlider = styled.button<{
+  prev?: boolean;
+}>`
   width: 92px;
   height: 92px;
   position: absolute;
@@ -21,6 +23,7 @@ export const ButtonSlider = styled.button`
   border: 1px solid #514a7e;
   border-radius: 50%;
   transition: all 0.7s ease-in-out;
+  background: #fffdf5;
   svg {
     width: 40px;
     height: 7px;
@@ -37,4 +40,11 @@ export const ButtonSlider = styled.button`
       fill: #fffdf5;
     }
   }
+  ${(props) =>
+    props.prev &&
+    `
+    svg{
+      transform:rotate(180deg);
+    }
+    `}
 `;
