@@ -6,8 +6,8 @@ import {
   Card,
   Reviews,
   Comment,
-  Accordion,
   Faq,
+  Accordion,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
@@ -66,10 +66,30 @@ const questions = [
   },
   {
     header: "Способы оплаты",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis molestias culpa ad eveniet.",
+    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero pariatur reprehenderit iusto repudiandae deleniti eveniet quasi soluta modi? Laborum dicta quod natus beatae libero delectus autem praesentium fugit deserunt. Temporibus dicta sequi, vitae ipsa, quasi amet veritatis consequatur nostrum suscipit voluptatem impedit obcaecati aliquam reiciendis. Minima corporis autem quibusdam amet, facilis temporibus voluptates quo reiciendis, atque, nemo provident numquam? Sint voluptatum temporibus commodi laborum fuga? Esse voluptas illum et reiciendis laborum ducimus doloremque ratione ab, at odio unde saepe tempora placeat delectus numquam mollitia explicabo facilis, natus praesentium ipsa autem ipsum. A quae sequi fugit suscipit quod nam, deleniti quia reiciendis error. Molestiae adipisci fuga explicabo quis tenetur voluptas harum soluta facere reprehenderit! Distinctio dignissimos quo beatae iusto, sed itaque nulla ullam fugit iure rerum, sequi dolorem, ea eaque error doloribus autem repudiandae quas? Nulla, dolor. Amet, fugit iusto! Veniam, numquam quasi vel eos, ex deleniti repudiandae voluptate perspiciatis placeat quisquam harum necessitatibus nostrum veritatis optio accusamus!",
   },
-].map((item) => {
-  return <Accordion header={item.header} text={item.text} />;
+  {
+    header: "Доставка",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptatem dolore nulla, minima quas totam vel mollitia harum sit fuga adipisci quibusdam? Deleniti nesciunt esse, quam quo quia veniam iure, facere modi, veritatis illo soluta placeat! Dolor exercitationem temporibus magni dignissimos est, ipsam optio facere natus. Adipisci vel sed corrupti assumenda quasi eos in consequatur, earum possimus, a esse facilis accusantium dolor atque excepturi doloremque asperiores omnis. Dicta, deleniti pariatur sequi asperiores cumque recusandae harum quam voluptas, vel doloribus consectetur.",
+  },
+  {
+    header: "Сроки доставки",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat beatae assumenda incidunt ea cumque sunt, architecto ut dolores debitis tempora magnam id nobis saepe voluptate ad odit cum enim quisquam. Recusandae, nobis provident sequi, natus animi harum labore quos facilis soluta perferendis quisquam error quis laboriosam nostrum obcaecati, excepturi sit! Minima sit numquam labore repudiandae autem sequi similique. A reiciendis at illum vitae facilis nesciunt quis culpa? Placeat repudiandae repellat aut debitis cumque ut nesciunt magni vel ipsum ea. Minima esse dolores doloremque distinctio vel maiores laudantium molestiae, autem quas ullam beatae laboriosam a veniam, qui reiciendis eum similique placeat eos vitae debitis hic doloribus eius sunt. Sequi magnam laboriosam adipisci.",
+  },
+  {
+    header: "Как сделать обмен?",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequuntur laboriosam rerum autem commodi, necessitatibus ratione blanditiis facere culpa esse repellendus nihil, iure harum sequi sint molestiae facilis. Vel hic rem enim, in impedit dolores ex nobis blanditiis temporibus. Maiores aspernatur, a amet quo ipsa impedit asperiores dicta nobis tempore voluptatibus delectus est esse omnis, ex rerum libero voluptate iste!",
+  },
+  {
+    header: "Как сделать возврат?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur perspiciatis, amet laboriosam mollitia officiis iure repellendus quia vitae possimus distinctio eaque aliquid vel atque harum culpa quis beatae veritatis et officia debitis. Quos natus officiis eligendi iusto molestiae. Cumque aliquid dolores facilis. Quam accusantium magnam, qui animi sit veritatis eveniet praesentium dicta voluptas consectetur mollitia unde corporis earum repudiandae itaque. Corporis iure eius, numquam autem, quibusdam mollitia possimus molestias totam nam atque quasi! Dicta quaerat voluptates impedit tempore omnis cupiditate dolorem optio eos nobis distinctio veniam magni quo praesentium nulla, eaque amet est explicabo magnam sed quas quam quidem! Molestias recusandae adipisci dolore cumque vitae voluptatum animi laudantium in iure quisquam ipsa placeat dolores eius itaque non eos consequuntur, quam perferendis ea, quibusdam enim impedit! Consectetur ex fuga magnam corrupti harum expedita atque aspernatur molestias. Itaque ad minima maiores vero ea consectetur a labore, pariatur ratione! Enim dolor sapiente aliquid. Molestias facere illum aliquid nostrum vero? Numquam suscipit laborum cupiditate. Animi asperiores iure quaerat maxime ea error modi aperiam cupiditate eos est fugiat, dolor molestiae incidunt unde, fuga atque esse quam voluptates. Dignissimos, modi dolorem voluptas voluptatibus magni quis. Ad qui laborum consequatur quidem et delectus enim doloribus quos officia.",
+  },
+  {
+    header: "Куда и когда вернутся деньги за возвращённый товар?",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam optio iusto aspernatur ducimus doloremque.",
+  },
+].map((item, index) => {
+  return <Accordion header={item.header} text={item.text} key={index} />;
 });
 
 const Main = () => {

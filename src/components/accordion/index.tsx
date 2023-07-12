@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { Content } from "./style";
+import { Content, Header, Body } from "./style";
 
 interface IProps {
   header: string;
@@ -11,18 +11,11 @@ const Accordion: FC<IProps> = ({ header, text }) => {
 
   return (
     <Content>
-      <div className="accordian-header" onClick={() => setShow(!show)}>
-        <div>Accordion Header</div>
-        <div className="sign">{show ? "-" : "+"}</div>
-      </div>
-      {show && (
-        <div className="accordian-body">
-          Lorem Ipsum is simply dummy text of the printing and type setting
-          industry. Lorem Ipsum has been the industry's ever since the 1500s,
-          when an unknown printer took a galley of type standard dummy text and
-          scrambled it to make a type specimen book.
-        </div>
-      )}
+      <Header onClick={() => setShow(!show)}>
+        <div>{header}</div>
+        <div>{show ? "-" : "+"}</div>
+      </Header>
+      {show && <Body>{text}</Body>}
     </Content>
   );
 };

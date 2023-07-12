@@ -1,34 +1,26 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin-top: 40px;
+  border-bottom: 1px solid #7d7d7d;
+`;
 
-  /* display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-flex-direction: column;
-gap: 20px; */
+export const Header = styled.div`
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
 
-  .sign {
-    font-size: 25px;
+  > div:last-child {
+    width: 20px;
+    height: 20px;
+    color: #514a7e;
   }
-  .accordian {
-    /* width: 300px;
-  border: 1px solid rgb(133, 133, 133); */
-  }
-  .accordian-header {
-    font-weight: 600;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 15px;
-    border: 2px solid rgb(133, 133, 133);
-    background-color: rgb(255, 255, 143);
-  }
-  .accordian-body {
-    padding: 15px 5px;
-  }
+`;
+
+export const Body = styled.div`
+  padding: 15px 5px;
 `;

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Content } from "./style";
+import { Content, Wrapper } from "./style";
 
 import { SubTitle } from "../../shared";
 
@@ -13,7 +13,7 @@ const Faq: FC<IProps> = ({ items }) => {
       <SubTitle content="FAQ">
         <h3>Часто задаваемые вопросы</h3>
       </SubTitle>
-      {items}
+      <Wrapper>{items}</Wrapper>
     </Content>
   );
 };

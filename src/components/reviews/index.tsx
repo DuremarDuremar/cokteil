@@ -25,8 +25,6 @@ const Reviews: FC<IProps> = ({ items }) => {
   const slideNext = () =>
     setActiveIndex(activeIndex < items.length - 2 ? activeIndex + 2 : 0);
 
-  console.log(activeIndex, "activeIndex");
-
   return (
     <Content>
       <SubTitle>
