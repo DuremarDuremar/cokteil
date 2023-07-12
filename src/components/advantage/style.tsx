@@ -5,13 +5,14 @@ export const Content = styled.div`
   margin-top: 11vw;
 `;
 
-export const Title = styled.div`
-  h3 {
-    font-size: 40px;
-    font-weight: 300;
-    line-height: 87.305%;
-  }
-`;
+// export const Title = styled.div`
+//   h3 {
+//     font-size: 40px;
+//     font-weight: 300;
+//     line-height: 87.305%;
+//   }
+// `;
+
 export const Grid = styled.div`
   margin-top: 93px;
   display: grid;

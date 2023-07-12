@@ -2,7 +2,8 @@ import React, { FC, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import { Content, Title, Wrapper, ButtonSlider } from "./style";
+import { Content, Wrapper, ButtonSlider } from "./style";
+import { SubTitle } from "../../shared";
 import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 
 interface IProps {
@@ -29,9 +30,9 @@ const Stock: FC<IProps> = ({ items }) => {
 
   return (
     <Content>
-      <Title>
+      <SubTitle content="Акции">
         <h3>Успей купить! </h3>
-      </Title>
+      </SubTitle>
       <Wrapper>
         <AliceCarousel
           mouseTracking

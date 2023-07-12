@@ -1,5 +1,6 @@
 import React from "react";
-import { Content, Title, Grid, Item } from "./style";
+import { Content, Grid, Item } from "./style";
+import { SubTitle } from "../../shared";
 
 const Advantage = () => {
   const Items = [
@@ -13,9 +14,9 @@ const Advantage = () => {
 
   return (
     <Content>
-      <Title>
+      <SubTitle>
         <h3>Почему выбирают нас?</h3>
-      </Title>
+      </SubTitle>
       <Grid>
         {Items.map((item) => (
           <Item key={item[0]} area={item[0]}>

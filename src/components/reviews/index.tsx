@@ -2,7 +2,8 @@ import React, { FC, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import { AddReview, Content, Title, Wrapper, ButtonSlider } from "./style";
+import { AddReview, Content, Wrapper, ButtonSlider } from "./style";
+import { SubTitle } from "../../shared";
 import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
 
 interface IProps {
@@ -28,9 +29,9 @@ const Reviews: FC<IProps> = ({ items }) => {
 
   return (
     <Content>
-      <Title>
+      <SubTitle>
         <h3>Отзывы наших покупателей</h3>{" "}
-      </Title>
+      </SubTitle>
       <Wrapper>
         <AliceCarousel
           animationDuration={1200}

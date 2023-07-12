@@ -1,10 +1,13 @@
 import React from "react";
-import { Content, Title, Wrapper } from "./style";
+import { Content, Wrapper } from "./style";
+import { SubTitle } from "../../shared";
 
 const Accordion = () => {
   return (
     <Content>
-      <Title>Часто задаваемые вопросы</Title>
+      <SubTitle content="FAQ">
+        <h3>Часто задаваемые вопросы</h3>
+      </SubTitle>
       <Wrapper></Wrapper>
     </Content>
   );
