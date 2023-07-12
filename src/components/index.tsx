@@ -6,3 +6,4 @@ export { default as Card } from "./card";
 export { default as Reviews } from "./reviews";
 export { default as Comment } from "./comment";
 export { default as Accordion } from "./accordion";
+export { default as Faq } from "./faq";

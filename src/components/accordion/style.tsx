@@ -1,26 +1,34 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin-top: 8vw;
+  margin-top: 40px;
+
+  /* display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+flex-direction: column;
+gap: 20px; */
+
+  .sign {
+    font-size: 25px;
+  }
+  .accordian {
+    /* width: 300px;
+  border: 1px solid rgb(133, 133, 133); */
+  }
+  .accordian-header {
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px;
+    border: 2px solid rgb(133, 133, 133);
+    background-color: rgb(255, 255, 143);
+  }
+  .accordian-body {
+    padding: 15px 5px;
+  }
 `;
-// export const Title = styled.div`
-//   h3 {
-//     font-size: 40px;
-//     font-weight: 300;
-//     line-height: 87.305%;
-//     position: relative;
-//     display: inline;
-//     :before {
-//       content: "FAQ";
-//       display: block;
-//       position: absolute;
-//       color: #514a7e;
-//       font-size: 40px;
-//       font-family: Bad Script;
-//       line-height: 87.305%;
-//       right: -120px;
-//       bottom: -20px;
-//     }
-//   }
-// `;
-export const Wrapper = styled.div``;

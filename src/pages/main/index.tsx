@@ -7,6 +7,7 @@ import {
   Reviews,
   Comment,
   Accordion,
+  Faq,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
@@ -58,6 +59,19 @@ const comments = [
   return <Comment item={item} index={index} key={index} />;
 });
 
+const questions = [
+  {
+    header: "Как сделать заказ?",
+    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci reprehenderit blanditiis earum odit consectetur laudantium deleniti culpa repellat eaque saepe?",
+  },
+  {
+    header: "Способы оплаты",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis molestias culpa ad eveniet.",
+  },
+].map((item) => {
+  return <Accordion header={item.header} text={item.text} />;
+});
+
 const Main = () => {
   return (
     <Content>
@@ -65,7 +79,7 @@ const Main = () => {
       <Advantage />
       <Stock items={cards} />
       <Reviews items={comments} />
-      <Accordion />
+      <Faq items={questions} />
     </Content>
   );
 };
