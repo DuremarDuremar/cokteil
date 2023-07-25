@@ -8,6 +8,7 @@ import {
   Comment,
   Faq,
   Accordion,
+  Cooperation,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
@@ -100,6 +101,7 @@ const Main = () => {
       <Stock items={cards} />
       <Reviews items={comments} />
       <Faq items={questions} />
+      <Cooperation />
     </Content>
   );
 };
