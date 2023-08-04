@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
-  margin-top: 9vw;
-  /* background: lightgray; */
-`;
+export const Content = styled.section``;
 
 // export const Title = styled.div`
 //   h3 {

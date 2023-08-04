@@ -1,2 +1,2 @@
 import styled from "styled-components";
-export const Content = styled.section``;
+export const Content = styled.main``;

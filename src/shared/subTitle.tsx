@@ -5,6 +5,7 @@ const SubTitle = styled.div<{
   right?: string;
   left?: string;
 }>`
+  margin-top: 150px;
   h3 {
     font-size: 40px;
     font-weight: 300;

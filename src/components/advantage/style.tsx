@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
+export const Content = styled.section`
   margin-right: 11vw;
-  margin-top: 11vw;
 `;
 
 // export const Title = styled.div`
