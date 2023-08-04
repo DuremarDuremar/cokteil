@@ -12,7 +12,10 @@ const Invite = () => {
         <input type="text" placeholder="Ваше имя" />
         <input type="tel" placeholder="Номер телефона" />
         <input type="email" placeholder="Электронная почта" />
-        <input type="checkbox" />
+        <div>
+          <input type="checkbox" />{" "}
+          <span>Даю согласие на обработку персональных данных</span>
+        </div>
         <button type="submit">Отправить</button>
       </Form>
     </Content>

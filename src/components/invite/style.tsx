@@ -21,11 +21,14 @@ export const Form = styled.div`
   input[type="text"],
   input[type="tel"],
   input[type="email"] {
+    max-width: 228px;
+    width: 100%;
     color: #7d7d7d;
     font-size: 12px;
     font-weight: 100;
     line-height: 118%;
     border-bottom: 1px solid #7d7d7d;
+    padding-bottom: 6px;
   }
   input[type="tel"],
   input[type="email"] {
@@ -33,5 +36,22 @@ export const Form = styled.div`
   }
   input[type="text"] {
     margin-top: 39px;
+  }
+  input[type="checkbox"] {
+    width: 9px;
+    height: 9px;
+  }
+  div {
+    margin-top: 6px;
+  }
+  span {
+    color: #7d7d7d;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 118%;
+    padding-left: 4px;
+  }
+  button {
+    margin-top: 40px;
   }
 `;
