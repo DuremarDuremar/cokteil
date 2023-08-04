@@ -9,6 +9,7 @@ import {
   Faq,
   Accordion,
   Cooperation,
+  Invite,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
@@ -102,6 +103,7 @@ const Main = () => {
       <Reviews items={comments} />
       <Faq items={questions} />
       <Cooperation />
+      <Invite />
     </Content>
   );
 };

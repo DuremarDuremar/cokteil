@@ -32,5 +32,4 @@ export const Text = styled.p<{
   font-size: ${({ size }) => `${size}px`};
   font-weight: 300;
   line-height: 118%;
-  /* text-align: ${({ size }) => (size === 16 ? "left" : "center")}; */
 `;

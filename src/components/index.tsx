@@ -8,3 +8,4 @@ export { default as Comment } from "./comment";
 export { default as Accordion } from "./accordion";
 export { default as Faq } from "./faq";
 export { default as Cooperation } from "./cooperation";
+export { default as Invite } from "./invite";
