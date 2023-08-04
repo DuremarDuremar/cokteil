@@ -9,7 +9,6 @@ export const Foto = styled.div`
 `;
 
 export const Details = styled.div`
-  /* height: 81px; */
   display: flex;
 `;
 export const Info = styled.div`
