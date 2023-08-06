@@ -10,10 +10,10 @@ import {
   Accordion,
   Cooperation,
   Invite,
-  Footer,
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
+import { Container } from "../../shared";
 import lot_1 from "../../assets/lot1.png";
 import lot_2 from "../../assets/lot2.png";
 import lot_3 from "../../assets/lot3.png";
@@ -96,16 +96,25 @@ const questions = [
 });
 
 const Main = () => {
+  const components = [
+    { component: <Welcome /> },
+    { component: <Advantage /> },
+    { component: <Stock items={cards} /> },
+    { component: <Reviews items={comments} /> },
+    { component: <Faq items={questions} /> },
+    { component: <Cooperation /> },
+    { component: <Invite />, padding: "0 0" },
+  ];
+
   return (
     <Content>
-      <Welcome />
-      <Advantage />
-      <Stock items={cards} />
-      <Reviews items={comments} />
-      <Faq items={questions} />
-      <Cooperation />
-      <Invite />
-      <Footer />
+      {components.map((item, index) => {
+        return (
+          <Container key={index} padding={item.padding}>
+            {item.component}
+          </Container>
+        );
+      })}
     </Content>
   );
 };

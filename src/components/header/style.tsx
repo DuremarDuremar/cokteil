@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.header`
   height: 135px;
-  /* background-color: lightgrey; */
+  padding: 0 8.9%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding-bottom: 15px;
