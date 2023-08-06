@@ -97,7 +97,7 @@ const questions = [
 
 const Main = () => {
   const components = [
-    { component: <Welcome /> },
+    { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
     { component: <Stock items={cards} /> },
     { component: <Reviews items={comments} /> },
@@ -110,7 +110,7 @@ const Main = () => {
     <Content>
       {components.map((item, index) => {
         return (
-          <Container key={index} padding={item.padding}>
+          <Container key={index} padding={item.padding} mt={item.mt}>
             {item.component}
           </Container>
         );

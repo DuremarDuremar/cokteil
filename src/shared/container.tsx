@@ -6,7 +6,7 @@ const Container = styled.div<{
   mt?: string;
 }>`
   background: ${(props) => props.bc};
-  margin-top: 150px;
+  margin-top: ${(props) => (props.mt ? props.mt : "150px")};
   padding: ${(props) => (props.padding ? props.padding : "0 8.9%")};
 `;
 

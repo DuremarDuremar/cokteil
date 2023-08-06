@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.section`
-  min-height: 716px;
+  /* min-height: 716px; */
   /* background: lightgray; */
 `;
 export const WelcomeTop = styled.div`
