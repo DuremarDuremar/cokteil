@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
 import { Content, Form } from "./style";
 
 const Invite = () => {
@@ -16,7 +17,9 @@ const Invite = () => {
           <input type="checkbox" />{" "}
           <span>Даю согласие на обработку персональных данных</span>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit">
+          Отправить <SvgArrow />
+        </button>
       </Form>
     </Content>
   );

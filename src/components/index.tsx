@@ -9,3 +9,4 @@ export { default as Accordion } from "./accordion";
 export { default as Faq } from "./faq";
 export { default as Cooperation } from "./cooperation";
 export { default as Invite } from "./invite";
+export { default as Footer } from "./footer";

@@ -18,6 +18,11 @@ export const Form = styled.div`
   flex-direction: column;
   align-items: start;
   padding: 34px 52px 41px;
+  h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 118%;
+  }
   input[type="text"],
   input[type="tel"],
   input[type="email"] {
@@ -52,6 +57,31 @@ export const Form = styled.div`
     padding-left: 4px;
   }
   button {
+    background: #514a7e;
+    color: #fffdf5;
     margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 148px;
+    width: 100%;
+    padding: 13px 0;
+    font-size: 14px;
+    border: 0.5px solid #514a7e;
+    transition: all 0.7s ease-in-out;
+    svg {
+      width: 26px;
+      height: 4px;
+      fill: #fffdf5;
+      transition: all 0.7s ease-in-out;
+    }
+    &:hover {
+      background: #fffdf5;
+      color: #514a7e;
+
+      svg {
+        fill: #514a7e;
+      }
+    }
   }
 `;
