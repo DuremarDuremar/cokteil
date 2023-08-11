@@ -13,7 +13,21 @@ export const Block = styled.div`
   &:last-child {
     align-items: end;
   }
-
+  &:nth-child(4) {
+    > div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      div:first-child {
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+    span {
+      padding-left: 8px;
+    }
+  }
   h3 {
     font-size: 20px;
     font-weight: 400;
@@ -29,10 +43,10 @@ export const Block = styled.div`
   p,
   span {
     font-size: 12px;
+    line-height: 170%;
   }
   svg {
     fill: #fffdf5;
-    cursor: pointer;
   }
   img {
     opacity: 0.5;

@@ -46,8 +46,8 @@ const Footer = () => {
       </Block>
       <Block>
         <div>
-          <h3>Соц. сети</h3>
           <div>
+            <h3>Соц. сети</h3>
             <SvgLinks />
           </div>
           <div>
