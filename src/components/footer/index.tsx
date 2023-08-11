@@ -62,7 +62,6 @@ const Footer = () => {
       </Block>
       <Block>
         <div>
-          {" "}
           <img src={logo} alt="logo" />
         </div>
       </Block>

@@ -4,11 +4,16 @@ export const Content = styled.footer`
   color: #fffdf5;
   margin-top: 150px;
   display: flex;
+  padding: 82px 0 86px;
 `;
 export const Block = styled.div`
   flex: 0 0 20%;
   display: flex;
   justify-content: center;
+  &:last-child {
+    align-items: end;
+  }
+
   h3 {
     font-size: 20px;
     font-weight: 400;
@@ -28,5 +33,13 @@ export const Block = styled.div`
   svg {
     fill: #fffdf5;
     cursor: pointer;
+  }
+  img {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
   }
 `;

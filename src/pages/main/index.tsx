@@ -99,7 +99,7 @@ const Main = () => {
   const components = [
     { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
-    { component: <Stock items={cards} /> },
+    { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
     { component: <Reviews items={comments} /> },
     { component: <Faq items={questions} /> },
     { component: <Cooperation /> },
