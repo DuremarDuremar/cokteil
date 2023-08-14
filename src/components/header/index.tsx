@@ -1,15 +1,25 @@
-import React from "react";
+import React, { FC } from "react";
+import Nav from "../nav";
 import { ReactComponent as SvgBurger } from "../../assets/menu.svg";
 import { ReactComponent as SvgSearch } from "../../assets/search.svg";
 import { ReactComponent as SvgAvatar } from "../../assets/avatar.svg";
 import { ReactComponent as SvgShop } from "../../assets/shopping.svg";
 import { Burger, Content, Avatar, Search, Shop } from "./style";
 
-const Header = () => {
+interface IProps {
+  burger: boolean;
+  setBurger: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header: FC<IProps> = ({ burger, setBurger }) => {
   return (
     <Content>
       <Burger>
-        <SvgBurger />
+        {burger ? (
+          <Nav setBurger={setBurger} />
+        ) : (
+          <SvgBurger onClick={() => setBurger(true)} />
+        )}
       </Burger>
       <Search>
         <SvgSearch />

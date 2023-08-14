@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Welcome,
   Advantage,
@@ -95,7 +95,11 @@ const questions = [
   return <Accordion header={item.header} text={item.text} key={index} />;
 });
 
-const Main = () => {
+interface IProps {
+  burger: boolean;
+}
+
+const Main: FC<IProps> = ({ burger }) => {
   const components = [
     { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
