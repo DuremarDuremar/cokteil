@@ -6,6 +6,7 @@ export const Content = styled.section`
 `;
 export const WelcomeTop = styled.div`
   display: flex;
+  height: 563px;
   > div {
     flex: 50%;
   }

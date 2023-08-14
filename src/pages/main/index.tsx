@@ -101,7 +101,7 @@ interface IProps {
 
 const Main: FC<IProps> = ({ burger }) => {
   const components = [
-    { component: <Welcome />, mt: "50px" },
+    { component: <Welcome burger={burger} />, mt: "50px" },
     { component: <Advantage /> },
     { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
     { component: <Reviews items={comments} /> },
