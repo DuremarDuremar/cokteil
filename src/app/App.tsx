@@ -6,7 +6,7 @@ import { Cart, Catalog, Lot, Main } from "../pages";
 import { Content, Global } from "./style";
 
 function App() {
-  const [burger, setBurger] = useState(false);
+  const [burger, setBurger] = useState<boolean>(false);
   console.log("burger", burger);
   return (
     <>
