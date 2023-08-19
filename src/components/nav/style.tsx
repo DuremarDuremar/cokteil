@@ -21,13 +21,12 @@ export const List = styled.nav`
       &:not(:first-child) {
         padding-top: 20px;
       }
+      &:hover > span {
+        font-size: 20px;
+        font-weight: 400;
+      }
       span {
         transition: all 0.3s ease-in-out;
-
-        &:hover {
-          font-size: 20px;
-          font-weight: 400;
-        }
       }
       ul {
         transition: all 0.6s ease-in-out;
@@ -48,7 +47,7 @@ export const List = styled.nav`
 export const SubList = styled.ul`
   background: #121212;
   width: 278px;
-  height: 855px;
+  padding: 30px 0;
   position: absolute;
   top: 0;
   left: 0;

@@ -68,11 +68,19 @@ const Nav: FC<IProps> = ({ setBurger }) => {
             return (
               <li key={index}>
                 <span>{item.main}</span>
-                <SubList>
-                  {item.sub.map((item, index) => {
-                    return <li key={index}>{item}</li>;
-                  })}
-                </SubList>
+                {item.sub.length ? (
+                  <SubList>
+                    {item.sub.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <span>{item}</span>
+                        </li>
+                      );
+                    })}
+                  </SubList>
+                ) : (
+                  ""
+                )}
               </li>
             );
           })}
