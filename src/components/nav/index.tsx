@@ -1,12 +1,62 @@
 import React, { FC } from "react";
 import logo from "../../assets/logo.png";
-import { Content, List } from "./style";
+import { Content, List, SubList } from "./style";
 
 interface IProps {
   setBurger: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Nav: FC<IProps> = ({ setBurger }) => {
+  const navLi = [
+    {
+      main: "Женщинам",
+      sub: ["платья", "юбки", "кофты", "сарафаны", "косынки"],
+    },
+    {
+      main: "Мужчинам",
+      sub: ["брюки", "джинсы", "шорты", "пиджаки", "футболки"],
+    },
+    {
+      main: "Детям",
+      sub: [
+        "брюки",
+        "джинсы",
+        "шорты",
+        "пиджаки",
+        "футболки",
+        "платья",
+        "юбки",
+        "кофты",
+        "сарафаны",
+        "косынки",
+      ],
+    },
+    {
+      main: "Обувь",
+      sub: ["ботинки", "туфли", "кеды", "сапоги"],
+    },
+    {
+      main: "Игрушки",
+      sub: ["конструктор", "мягкие", "головоломки", "машинки", "солдатики"],
+    },
+    {
+      main: "Аксессуары",
+      sub: ["ремни", "шарфы", "шапки", "кепки", "солнечные очки"],
+    },
+    {
+      main: "Большие размеры",
+      sub: ["4XL", "3XL", "2XL"],
+    },
+    {
+      main: "Дополнительно",
+      sub: [],
+    },
+    {
+      main: "Акции",
+      sub: [],
+    },
+  ];
+
   return (
     <Content>
       <List>
@@ -14,15 +64,18 @@ const Nav: FC<IProps> = ({ setBurger }) => {
           <img src={logo} alt="logo" />
         </div>
         <ul>
-          <li>Женщинам </li>
-          <li>Мужчинам</li>
-          <li>Детям</li>
-          <li>Обувь</li>
-          <li>Игрушки</li>
-          <li>Аксессуары</li>
-          <li>Большие размеры</li>
-          <li>Дополнительно</li>
-          <li>Акции</li>
+          {navLi.map((item, index) => {
+            return (
+              <li key={index}>
+                <span>{item.main}</span>
+                <SubList>
+                  {item.sub.map((item, index) => {
+                    return <li key={index}>{item}</li>;
+                  })}
+                </SubList>
+              </li>
+            );
+          })}
         </ul>
       </List>
     </Content>

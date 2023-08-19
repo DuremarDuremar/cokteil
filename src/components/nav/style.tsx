@@ -13,18 +13,44 @@ export const List = styled.nav`
   ul {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     padding-left: 18px;
+
     li {
+      position: relative;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        font-size: 20px;
-        font-weight: 400;
+      &:not(:first-child) {
+        padding-top: 20px;
+      }
+      span {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      ul {
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+      }
+      &:hover > ul {
+        transform: translateX(90%);
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
   div {
     cursor: pointer;
   }
+`;
+
+export const SubList = styled.ul`
+  background: #121212;
+  width: 278px;
+  height: 855px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
 `;
