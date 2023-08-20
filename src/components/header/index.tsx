@@ -16,7 +16,7 @@ const Header: FC<IProps> = ({ burger, setBurger }) => {
   const [prof, setProf] = useState(false);
 
   return (
-    <Content>
+    <Content onClick={() => setProf(false)}>
       <Burger>
         {burger ? (
           <Nav setBurger={setBurger} />
@@ -28,7 +28,12 @@ const Header: FC<IProps> = ({ burger, setBurger }) => {
         <SvgSearch />
         <input type="text" placeholder="Поиск" />
       </Search>
-      <Avatar onClick={() => setProf(!prof)}>
+      <Avatar
+        onClick={(e) => {
+          setProf(!prof);
+          e.stopPropagation();
+        }}
+      >
         <SvgAvatar />
       </Avatar>
       <Shop>
