@@ -11,3 +11,4 @@ export { default as Cooperation } from "./cooperation";
 export { default as Invite } from "./invite";
 export { default as Footer } from "./footer";
 export { default as Nav } from "./nav";
+export { default as Profile } from "./profile";

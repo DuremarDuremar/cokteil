@@ -1,5 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import Nav from "../nav";
+import Profile from "../profile";
 import { ReactComponent as SvgBurger } from "../../assets/menu.svg";
 import { ReactComponent as SvgSearch } from "../../assets/search.svg";
 import { ReactComponent as SvgAvatar } from "../../assets/avatar.svg";
@@ -12,6 +13,8 @@ interface IProps {
 }
 
 const Header: FC<IProps> = ({ burger, setBurger }) => {
+  const [prof, setProf] = useState(false);
+
   return (
     <Content>
       <Burger>
@@ -25,12 +28,13 @@ const Header: FC<IProps> = ({ burger, setBurger }) => {
         <SvgSearch />
         <input type="text" placeholder="Поиск" />
       </Search>
-      <Avatar>
+      <Avatar onClick={() => setProf(!prof)}>
         <SvgAvatar />
       </Avatar>
       <Shop>
         <SvgShop />
       </Shop>
+      {prof && <Profile />}
     </Content>
   );
 };
