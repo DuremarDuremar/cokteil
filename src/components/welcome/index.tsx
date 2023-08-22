@@ -4,27 +4,19 @@ import main_2 from "../../assets/main2.png";
 import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 import { Content, WelcomeBottom, WelcomeTop } from "./style";
 
-interface IProps {
-  burger: boolean;
-}
-
-const Welcome: FC<IProps> = ({ burger }) => {
+const Welcome: FC = () => {
   return (
     <Content>
       <WelcomeTop>
         <div>
-          {!burger && (
-            <>
-              <img src={main_1} alt="main1" />
-              <h2>
-                Добро пожаловать <br /> в <strong>Cocteil</strong>
-              </h2>
-              <p>
-                Экономим Ваше время! Предлагаем лучшие цены! Доставляем в
-                кратчайшие сроки!
-              </p>
-            </>
-          )}
+          <img src={main_1} alt="main1" />
+          <h2>
+            Добро пожаловать <br /> в <strong>Cocteil</strong>
+          </h2>
+          <p>
+            Экономим Ваше время! Предлагаем лучшие цены! Доставляем в кратчайшие
+            сроки!
+          </p>
         </div>
 
         <div>

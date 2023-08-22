@@ -95,13 +95,9 @@ const questions = [
   return <Accordion header={item.header} text={item.text} key={index} />;
 });
 
-interface IProps {
-  burger: boolean;
-}
-
-const Main: FC<IProps> = ({ burger }) => {
+const Main: FC = () => {
   const components = [
-    { component: <Welcome burger={burger} />, mt: "50px" },
+    { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
     { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
     { component: <Reviews items={comments} /> },

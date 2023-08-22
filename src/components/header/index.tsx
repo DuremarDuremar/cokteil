@@ -10,13 +10,13 @@ import { Burger, Content, Avatar, Search, Shop } from "./style";
 interface IProps {
   burger: boolean;
   setBurger: React.Dispatch<React.SetStateAction<boolean>>;
+  prof: boolean;
+  setProf: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header: FC<IProps> = ({ burger, setBurger }) => {
-  const [prof, setProf] = useState(false);
-
+const Header: FC<IProps> = ({ burger, setBurger, prof, setProf }) => {
   return (
-    <Content onClick={() => setProf(false)}>
+    <Content>
       <Burger>
         {burger ? (
           <Nav setBurger={setBurger} />

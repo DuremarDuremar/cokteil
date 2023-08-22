@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import logo from "../../assets/logo.png";
-import { Content, List, SubList } from "./style";
+import { Content, List, SubList, Wrapper } from "./style";
 
 interface IProps {
   setBurger: React.Dispatch<React.SetStateAction<boolean>>;
@@ -59,33 +59,35 @@ const Nav: FC<IProps> = ({ setBurger }) => {
 
   return (
     <Content>
-      <List>
-        <div onClick={() => setBurger(false)}>
-          <img src={logo} alt="logo" />
-        </div>
-        <ul>
-          {navLi.map((item, index) => {
-            return (
-              <li key={index}>
-                <span>{item.main}</span>
-                {item.sub.length ? (
-                  <SubList>
-                    {item.sub.map((item, index) => {
-                      return (
-                        <li key={index}>
-                          <span>{item}</span>
-                        </li>
-                      );
-                    })}
-                  </SubList>
-                ) : (
-                  ""
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </List>
+      <Wrapper>
+        <List>
+          <div onClick={() => setBurger(false)}>
+            <img src={logo} alt="logo" />
+          </div>
+          <ul>
+            {navLi.map((item, index) => {
+              return (
+                <li key={index}>
+                  <span>{item.main}</span>
+                  {item.sub.length ? (
+                    <SubList>
+                      {item.sub.map((item, index) => {
+                        return (
+                          <li key={index}>
+                            <span>{item}</span>
+                          </li>
+                        );
+                      })}
+                    </SubList>
+                  ) : (
+                    ""
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </List>
+      </Wrapper>
     </Content>
   );
 };

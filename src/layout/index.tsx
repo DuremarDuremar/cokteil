@@ -1,17 +1,20 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Header, Footer } from "../components";
 import { Content } from "./style";
 
-interface IProps {
-  burger: boolean;
-  setBurger: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const Layout: FC = () => {
+  const [burger, setBurger] = useState<boolean>(false);
+  const [prof, setProf] = useState<boolean>(false);
 
-const Layout: FC<IProps> = ({ burger, setBurger }) => {
   return (
-    <Content>
-      <Header burger={burger} setBurger={setBurger} />
+    <Content onClick={() => setProf(false)}>
+      <Header
+        burger={burger}
+        setBurger={setBurger}
+        prof={prof}
+        setProf={setProf}
+      />
       <Outlet />
       <Footer />
     </Content>

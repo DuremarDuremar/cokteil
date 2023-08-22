@@ -29,6 +29,7 @@ export const Search = styled.div`
   place-self: center start;
   white-space: nowrap;
   overflow-x: hidden;
+  z-index: 2;
   input {
     margin-left: 19px;
     max-width: 21vw;

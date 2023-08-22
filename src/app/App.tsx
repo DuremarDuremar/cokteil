@@ -6,22 +6,17 @@ import { Cart, Catalog, Lot, Main } from "../pages";
 import { Content, Global } from "./style";
 
 function App() {
-  const [burger, setBurger] = useState<boolean>(false);
-  console.log("burger", burger);
   return (
     <>
       <Global />
       <Content>
         <Routes>
-          <Route
-            path="/"
-            element={<Layout burger={burger} setBurger={setBurger} />}
-          >
-            <Route index element={<Main burger={burger} />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Main />} />
             <Route path="catalog" element={<Catalog />} />
             <Route path="cart" element={<Cart />} />
             <Route path="lot/:id" element={<Lot />} />
-            <Route path="*" element={<Main burger={burger} />} />
+            <Route path="*" element={<Main />} />
           </Route>
         </Routes>
       </Content>

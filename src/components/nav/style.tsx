@@ -2,8 +2,15 @@ import styled from "styled-components";
 export const Content = styled.div`
   position: relative;
 `;
-export const List = styled.nav`
+
+export const Wrapper = styled.div`
   position: absolute;
+  background: #fffdf5;
+  width: 120%;
+  height: 875px;
+`;
+
+export const List = styled.nav`
   background: #121212;
   color: #fffdf5;
   box-shadow: 0px 4px 20px 0px rgba(51, 51, 51, 0.05);
