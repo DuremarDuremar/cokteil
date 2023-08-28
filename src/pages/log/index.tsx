@@ -1,5 +1,6 @@
 import React from "react";
-import { Content, Container } from "./style";
+import { ReactComponent as SvgClose } from "../../assets/clarity_close.svg";
+import { Content, Container, Button, NLink } from "./style";
 import { SubTitle } from "../../shared";
 
 const Log = () => {
@@ -14,9 +15,16 @@ const Log = () => {
           <input type="password" placeholder="Пароль" />
         </form>
         <div>
-          <button>Войти в кабинет</button>
-          <button>Регистрация</button>
+          <Button color="#FFFDF5" bc="#514A7E">
+            Войти в кабинет
+          </Button>
+          <Button color="#514A7E" bc="#FFFDF5">
+            Регистрация
+          </Button>
         </div>
+        <NLink to={"/"}>
+          <SvgClose />
+        </NLink>
       </Content>
     </Container>
   );

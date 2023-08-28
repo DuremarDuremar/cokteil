@@ -6,7 +6,9 @@ const Profile = () => {
   return (
     <Content onClick={(e) => e.stopPropagation()}>
       <Photo></Photo>
-      <Entry>Войти</Entry>
+      <Entry to="/log">
+        <span>Войти</span>
+      </Entry>
       <Cart>
         <SvgShop /> <span>Корзина</span>
       </Cart>

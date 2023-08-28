@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
 export const Content = styled.div`
   position: absolute;
   display: flex;
@@ -21,7 +23,7 @@ export const Photo = styled.div`
   background: #c4c4c4;
   border-radius: 50%;
 `;
-export const Entry = styled.button`
+export const Entry = styled(NavLink)`
   width: 100%;
   max-width: 109px;
   height: 26px;
@@ -30,6 +32,14 @@ export const Entry = styled.button`
   color: #fffdf5;
   font-size: 14px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    color: #514a7e;
+    background: #fffdf5;
+  }
 `;
 export const Cart = styled.div`
   display: flex;
