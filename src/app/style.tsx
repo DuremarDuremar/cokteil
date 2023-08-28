@@ -72,5 +72,5 @@ export const Content = styled.div`
   font-weight: 300;
   background: #fffdf5;
   color: #121212;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 `;

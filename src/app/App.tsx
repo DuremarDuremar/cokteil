@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "../layout";
-import { Cart, Catalog, Lot, Main } from "../pages";
+import { Cart, Catalog, Lot, Main, Log } from "../pages";
 
 import { Content, Global } from "./style";
 
@@ -18,6 +18,7 @@ function App() {
             <Route path="lot/:id" element={<Lot />} />
             <Route path="*" element={<Main />} />
           </Route>
+          <Route path="log" element={<Log />} />
         </Routes>
       </Content>
     </>
