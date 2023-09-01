@@ -11,7 +11,7 @@ export const Content = styled.section`
   align-items: center;
 `;
 
-export const Form = styled.div`
+export const Form = styled.form`
   background: #fffdf5;
   width: 80%;
   display: flex;

@@ -1,12 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as SvgClose } from "../../assets/clarity_close.svg";
 import { Content, Container, Button, NLink } from "./style";
 import { SubTitle } from "../../shared";
 
 const Log = () => {
+  let navigate = useNavigate();
+
   return (
-    <Container>
-      <Content>
+    <Container
+      onClick={() => {
+        navigate("/");
+      }}
+    >
+      <Content onClick={(e) => e.stopPropagation()}>
         <SubTitle>
           <h3>Вход в личный кабинет</h3>
         </SubTitle>
