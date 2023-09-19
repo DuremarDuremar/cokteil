@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import Nav from "../nav";
 import Profile from "../profile";
 import { ReactComponent as SvgBurger } from "../../assets/menu.svg";
