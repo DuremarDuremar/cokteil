@@ -8,9 +8,11 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const Content = styled.div`
+export const Content = styled.div<{
+  reg: boolean;
+}>`
   background: #fffdf5;
-  max-width: 901px;
+  max-width: ${(props) => (props.reg ? "1101px" : "901px")};
   width: 100%;
   height: 463px;
   display: flex;
@@ -21,6 +23,7 @@ export const Content = styled.div`
   form {
     display: flex;
     flex-direction: column;
+    width: 100%;
     row-gap: 34px;
 
     input {
@@ -31,10 +34,16 @@ export const Content = styled.div`
       border-bottom: 1px solid #7d7d7d;
     }
   }
-  > div {
-    display: flex;
-    column-gap: 46px;
-  }
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  column-gap: 3vw;
+`;
+
+export const Inputs = styled.div`
+  display: flex;
+  column-gap: 6vw;
 `;
 
 export const Button = styled.button<{

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReactComponent as SvgClose } from "../../assets/clarity_close.svg";
-import { Content, Container, Button, NLink } from "./style";
+import { Content, Container, Inputs, Button, NLink, Buttons } from "./style";
 import { SubTitle } from "../../shared";
 
 const Log = () => {
+  const [reg, setReg] = useState(false);
+
   let navigate = useNavigate();
+
+  console.log("reg", reg);
 
   return (
     <Container
@@ -13,22 +17,30 @@ const Log = () => {
         navigate("/");
       }}
     >
-      <Content onClick={(e) => e.stopPropagation()}>
+      <Content onClick={(e) => e.stopPropagation()} reg={reg}>
         <SubTitle>
-          <h3>Вход в личный кабинет</h3>
+          <h3>{reg ? "Регистрация" : "Вход в личный кабинет"}</h3>
         </SubTitle>
-        <form>
-          <input type="email" placeholder="Электронная почта" />
-          <input type="password" placeholder="Пароль" />
-        </form>
-        <div>
+        <Inputs>
+          {reg && (
+            <form>
+              <input type="name" placeholder="ФИО" />
+              <input type="tel" placeholder="Контактный телефон" />
+            </form>
+          )}
+          <form>
+            <input type="email" placeholder="Электронная почта" />
+            <input type="password" placeholder="Пароль" />
+          </form>
+        </Inputs>
+        <Buttons>
           <Button color="#FFFDF5" bc="#514A7E">
-            Войти в кабинет
+            {reg ? "Отправить" : "Войти в кабинет"}
           </Button>
-          <Button color="#514A7E" bc="#FFFDF5">
-            Регистрация
+          <Button color="#514A7E" bc="#FFFDF5" onClick={() => setReg(!reg)}>
+            {reg ? "Войти в кабинет" : "Регистрация"}
           </Button>
-        </div>
+        </Buttons>
         <NLink to={"/"}>
           <SvgClose />
         </NLink>
