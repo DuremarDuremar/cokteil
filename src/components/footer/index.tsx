@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as SvgLinks } from "../../assets/links.svg";
 import { ReactComponent as SvgPhone } from "../../assets/phone.svg";
 import { ReactComponent as SvgTime } from "../../assets/time.svg";
@@ -61,7 +62,11 @@ const Footer = () => {
         </div>
       </Block>
       <Block>
-        <div>
+        <div
+          onClick={() => {
+            scroll.scrollToTop();
+          }}
+        >
           <img src={logo} alt="logo" />
         </div>
       </Block>

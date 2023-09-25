@@ -10,6 +10,7 @@ export const Block = styled.div`
   flex: 0 0 20%;
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
   &:last-child {
     align-items: end;
   }

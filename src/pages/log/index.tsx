@@ -9,8 +9,6 @@ const Log = () => {
 
   let navigate = useNavigate();
 
-  console.log("reg", reg);
-
   return (
     <Container
       onClick={() => {

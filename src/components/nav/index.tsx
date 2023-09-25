@@ -59,8 +59,8 @@ const Nav: FC<IProps> = ({ setBurger }) => {
 
   return (
     <Content>
-      <Wrapper>
-        <List>
+      <Wrapper onClick={() => setBurger(false)}>
+        <List onClick={(e) => e.stopPropagation()}>
           <div onClick={() => setBurger(false)}>
             <img src={logo} alt="logo" />
           </div>
