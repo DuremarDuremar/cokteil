@@ -85,3 +85,15 @@ export const Form = styled.form`
     }
   }
 `;
+
+export const Application = styled.section`
+  display: flex;
+  justify-content: center;
+  > div {
+    width: 685px;
+    height: 87px;
+  }
+  h6 {
+    display: inline;
+  }
+`;
