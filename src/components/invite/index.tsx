@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SubTitle } from "../../shared";
 import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
-import { Content, Form, Application } from "./style";
+import { Content, Form, Application, Wrapper, Item } from "./style";
 
 const Invite = () => {
   const [name, setName] = useState("");
@@ -62,7 +62,11 @@ const Invite = () => {
   } else {
     return (
       <Application>
-        <div>
+        <Wrapper>
+          <Item first />
+
+          <Item />
+
           <SubTitle>
             <h3>Ваша заявка обрабатывается.</h3>
           </SubTitle>
@@ -70,7 +74,7 @@ const Invite = () => {
             <span>Наш специалист с Вами свяжется в ближайшее время</span>
             <h6>Спасибо!</h6>
           </div>
-        </div>
+        </Wrapper>
       </Application>
     );
   }

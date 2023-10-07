@@ -89,11 +89,41 @@ export const Form = styled.form`
 export const Application = styled.section`
   display: flex;
   justify-content: center;
-  > div {
-    width: 685px;
-    height: 87px;
+`;
+
+export const Wrapper = styled.div`
+  position: relative;
+  padding-left: 7px;
+  width: 685px;
+  height: 87px;
+  div:last-child {
+    display: flex;
+    margin-top: 31px;
   }
   h6 {
-    display: inline;
+    color: #514a7e;
+    font-family: Bad Script;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 87.305%;
+    padding-left: 53px;
   }
+  span {
+    font-size: 16px;
+    line-height: 118%;
+  }
+`;
+
+export const Item = styled.div<{
+  first?: boolean;
+}>`
+  position: absolute;
+  left: ${({ first }) => (first ? "-16vw" : "-6vw")};
+  top: ${({ first }) => (first ? "-60px" : "60px")};
+
+  background: #514a7e;
+  box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
+  width: ${({ first }) => (first ? "73px" : "47px")};
+  height: ${({ first }) => (first ? "73px" : "47px")};
+  border-radius: ${({ first }) => (first ? "73px" : "47px")};
 `;
