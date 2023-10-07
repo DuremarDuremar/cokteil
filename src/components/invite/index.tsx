@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { SubTitle } from "../../shared";
 import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
-import { Content, Form, Application, Wrapper, Item } from "./style";
+import { ReactComponent as SvgClose } from "../../assets/clarity_close.svg";
+import { Content, Form, Application, Wrapper, Item, Close } from "./style";
 
 const Invite = () => {
   const [name, setName] = useState("");
@@ -64,9 +65,10 @@ const Invite = () => {
       <Application>
         <Wrapper>
           <Item first />
-
           <Item />
-
+          <Close onClick={() => setApplication(false)}>
+            <SvgClose />
+          </Close>
           <SubTitle>
             <h3>Ваша заявка обрабатывается.</h3>
           </SubTitle>

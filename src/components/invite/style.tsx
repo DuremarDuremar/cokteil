@@ -94,6 +94,7 @@ export const Application = styled.section`
 export const Wrapper = styled.div`
   position: relative;
   padding-left: 7px;
+  margin-top: 60px;
   width: 685px;
   height: 87px;
   div:last-child {
@@ -119,11 +120,29 @@ export const Item = styled.div<{
 }>`
   position: absolute;
   left: ${({ first }) => (first ? "-16vw" : "-6vw")};
-  top: ${({ first }) => (first ? "-60px" : "60px")};
+  top: ${({ first }) => (first ? "-60px" : "70px")};
 
   background: #514a7e;
   box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
   width: ${({ first }) => (first ? "73px" : "47px")};
   height: ${({ first }) => (first ? "73px" : "47px")};
   border-radius: ${({ first }) => (first ? "73px" : "47px")};
+`;
+
+export const Close = styled.div`
+  position: absolute;
+  right: -10vw;
+  top: -110px;
+  background: #514a7e;
+  box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
+  border-radius: 50%;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    fill: #fffdf5;
+  }
 `;
