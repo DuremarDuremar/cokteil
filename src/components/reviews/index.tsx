@@ -19,34 +19,35 @@ const responsive = {
 };
 
 const Reviews: FC<IProps> = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
-
-  const slideNext = () =>
-    setActiveIndex(activeIndex < items.length - 2 ? activeIndex + 2 : 0);
-
+  const renderNextButton = () => {
+    return (
+      <ButtonSlider>
+        <SvgArrow />
+      </ButtonSlider>
+    );
+  };
+  const renderPrevButton = () => {
+    return <></>;
+  };
   return (
     <Content>
       <SubTitle>
-        <h3>Отзывы наших покупателей</h3>{" "}
+        <h3>Отзывы наших покупателей</h3>
       </SubTitle>
       <Wrapper>
         <AliceCarousel
           animationDuration={1200}
-          disableButtonsControls={true}
+          // disableButtonsControls={true}
           disableDotsControls={true}
+          infinite
           items={items}
           mouseTracking
           responsive={responsive}
-          activeIndex={activeIndex}
-          onSlideChanged={syncActiveIndex}
+          // activeIndex={activeIndex}
+          // onSlideChanged={syncActiveIndex}
+          renderNextButton={renderNextButton}
+          renderPrevButton={renderPrevButton}
         />
-        <ButtonSlider
-          onClick={slideNext}
-          prev={activeIndex >= items.length - 2 ? true : false}
-        >
-          <SvgArrow />
-        </ButtonSlider>
       </Wrapper>
       <AddReview>
         <button>Добавить отзыв</button>

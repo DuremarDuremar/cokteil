@@ -40,9 +40,7 @@ export const AddReview = styled.div`
   }
 `;
 
-export const ButtonSlider = styled.button<{
-  prev?: boolean;
-}>`
+export const ButtonSlider = styled.button<{}>`
   width: 92px;
   height: 92px;
   position: absolute;
@@ -69,11 +67,4 @@ export const ButtonSlider = styled.button<{
       fill: #fffdf5;
     }
   }
-  ${(props) =>
-    props.prev &&
-    `
-    svg{
-      transform:rotate(180deg);
-    }
-    `}
 `;

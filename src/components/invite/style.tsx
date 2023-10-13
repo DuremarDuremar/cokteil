@@ -142,6 +142,13 @@ export const Close = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.7s ease-in-out;
+  &:hover {
+    background: #fffdf5;
+    svg {
+      fill: #514a7e;
+    }
+  }
   svg {
     fill: #fffdf5;
   }
