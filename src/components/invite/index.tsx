@@ -39,6 +39,7 @@ const Invite = () => {
           <input
             required={email ? false : true}
             type="tel"
+            minLength={7}
             placeholder="Номер телефона"
             name="message"
             onChange={(e) => setPhone(e.target.value)}
@@ -46,6 +47,7 @@ const Invite = () => {
           <input
             required={phone ? false : true}
             type="email"
+            minLength={7}
             placeholder="Электронная почта"
             name="user_email"
             onChange={(e) => setEmail(e.target.value)}

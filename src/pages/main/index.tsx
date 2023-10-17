@@ -13,7 +13,7 @@ import {
 } from "../../components";
 import { Content } from "./style";
 import { IComment } from "../../components/comment";
-import { Container } from "../../shared";
+import { Container, ScrollToTop } from "../../shared";
 import lot_1 from "../../assets/lot1.png";
 import lot_2 from "../../assets/lot2.png";
 import lot_3 from "../../assets/lot3.png";
@@ -115,6 +115,7 @@ const Main: FC = () => {
           </Container>
         );
       })}
+      <ScrollToTop />
     </Content>
   );
 };
