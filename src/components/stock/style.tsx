@@ -10,14 +10,12 @@ export const Wrapper = styled.div`
     /* width: 111%; */
   }
   ul {
-    margin-left: 5px;
+    margin-left: 11vw;
   }
   li {
     max-width: 278px;
     width: 100%;
     background-size: cover;
-  }
-  li:not(:first-child) {
     margin-left: 80px;
   }
 `;
@@ -35,22 +33,9 @@ export const ButtonSlider = styled.button<{
     fill: #514a7e;
     width: 60px;
   }
-  ${(props) =>
-    props.prev &&
-    `
-    left:0%;
-    bottom: 24%;
-    svg{
-      transform:rotate(180deg);
-    }
-    `}
-  ${(props) =>
-    !props.prev &&
-    `
-  right:0%;
+  right: 0%;
   bottom: 24%;
-    `}
-&:hover {
+  &:hover {
     background: #514a7e;
 
     svg {

@@ -14,20 +14,22 @@ const responsive = {
   0: { items: 1 },
   568: { items: 2 },
   1300: {
-    items: 3,
+    items: 4,
     itemsFit: "contain",
   },
 };
 
 const Stock: FC<IProps> = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const slidePrev = () => setActiveIndex(activeIndex > 0 ? activeIndex - 1 : 0);
-  const slideNext = () =>
-    setActiveIndex(
-      activeIndex < items.length - 3 ? activeIndex + 1 : items.length
+  const renderNextButton = () => {
+    return (
+      <ButtonSlider>
+        <SvgArrow />
+      </ButtonSlider>
     );
-  const syncActiveIndex = ({ item }: any) => setActiveIndex(item);
-
+  };
+  const renderPrevButton = () => {
+    return <></>;
+  };
   return (
     <Content>
       <SubTitle content="Акции">
@@ -35,25 +37,15 @@ const Stock: FC<IProps> = ({ items }) => {
       </SubTitle>
       <Wrapper>
         <AliceCarousel
-          mouseTracking
           animationDuration={800}
-          items={items}
-          responsive={responsive}
-          activeIndex={activeIndex}
-          onSlideChanged={syncActiveIndex}
-          disableButtonsControls={true}
           disableDotsControls={true}
+          infinite
+          items={items}
+          mouseTracking
+          responsive={responsive}
+          renderNextButton={renderNextButton}
+          renderPrevButton={renderPrevButton}
         />
-        {activeIndex > 0 && (
-          <ButtonSlider onClick={slidePrev} prev>
-            <SvgArrow />
-          </ButtonSlider>
-        )}
-        {activeIndex < items.length - 3 && (
-          <ButtonSlider onClick={slideNext}>
-            <SvgArrow />
-          </ButtonSlider>
-        )}
       </Wrapper>
     </Content>
   );

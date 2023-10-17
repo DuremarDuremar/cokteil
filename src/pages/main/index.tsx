@@ -23,7 +23,7 @@ import lot_6 from "../../assets/lot6.png";
 import comment_1 from "../../assets/commentFoto1.png";
 import comment_2 from "../../assets/commentFoto2.png";
 
-const cards = [lot_1, lot_3, lot_5, lot_6, lot_2, lot_4].map((item, index) => {
+const cards = [lot_3, lot_5, lot_6, lot_2, lot_4, lot_1].map((item, index) => {
   return <Card lot={item} index={index} key={index} />;
 });
 
