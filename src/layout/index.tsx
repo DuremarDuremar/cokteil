@@ -15,7 +15,10 @@ const Layout: FC = () => {
         prof={prof}
         setProf={setProf}
       />
-      <Outlet />
+      <div className="noscroll">
+        <Outlet />
+      </div>
+
       <Footer />
     </Content>
   );
