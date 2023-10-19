@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { ReactComponent as SvgArrow } from "../assets/arrowLit.svg";
 
 const Content = styled.div`
-  width: 80px;
+  width: 76px;
   height: 90px;
+  @media (max-width: 1400px) {
+    width: 66px;
+    height: 80px;
+  }
   background: #fffdf5;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
+  bottom: 0;
   border-radius: 5px;
 `;
 
@@ -55,7 +59,7 @@ const ScrollToTop = () => {
         to="noscroll"
         spy={true}
         smooth={true}
-        offset={50}
+        offset={-150}
         duration={500}
       >
         <SvgArrow />

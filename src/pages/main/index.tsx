@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useMediaQuery } from "react-responsive";
 import {
   Welcome,
   Advantage,
@@ -96,6 +97,12 @@ const questions = [
 });
 
 const Main: FC = () => {
+  const [res1300, res900, res630] = [
+    useMediaQuery({ query: "(min-width: 1301px)" }),
+    useMediaQuery({ query: "(min-width: 901px)" }),
+    useMediaQuery({ query: "(min-width: 631px)" }),
+  ];
+
   const components = [
     { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
@@ -115,7 +122,7 @@ const Main: FC = () => {
           </Container>
         );
       })}
-      <ScrollToTop />
+      {res1300 && <ScrollToTop />}
     </Content>
   );
 };
