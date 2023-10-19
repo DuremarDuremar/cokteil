@@ -17,9 +17,8 @@ const Layout: FC = () => {
       />
       <div className="noscroll">
         <Outlet />
+        <Footer />
       </div>
-
-      <Footer />
     </Content>
   );
 };

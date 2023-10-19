@@ -13,7 +13,11 @@ interface IProps {
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1300: {
+  1000: {
+    items: 3,
+    itemsFit: "contain",
+  },
+  1360: {
     items: 4,
     itemsFit: "contain",
   },

@@ -6,8 +6,11 @@ export const Content = styled.div`
   justify-content: space-between;
   padding-left: 24px;
   padding-right: 29px;
-  max-width: 459px;
-  width: 100%;
+  gap: 15px;
+  @media (min-width: 1300px) {
+    max-width: 459px;
+  }
+  width: calc(100% - 120px);
   height: 204px;
   background: #fffdf5;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
@@ -28,6 +31,9 @@ export const Info = styled.div`
   }
   p {
     max-width: 264px;
+    @media (max-width: 1300px) {
+      max-width: 664px;
+    }
     height: 82px;
     width: 100%;
     overflow-y: auto;

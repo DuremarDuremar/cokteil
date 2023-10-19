@@ -6,7 +6,7 @@ import { ReactComponent as SvgArrow } from "../assets/arrowLit.svg";
 const Content = styled.div`
   width: 76px;
   height: 90px;
-  @media (max-width: 1400px) {
+  @media (max-width: 1410px) {
     width: 66px;
     height: 80px;
   }
@@ -22,6 +22,10 @@ const Content = styled.div`
 const ToTop = styled(Link)`
   width: 72px;
   height: 72px;
+  @media (max-width: 1410px) {
+    width: 62px;
+    height: 62px;
+  }
   background: #514a7e;
   border-radius: 50%;
   display: flex;

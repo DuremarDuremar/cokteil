@@ -10,9 +10,9 @@ interface IProps {
   items: JSX.Element[];
 }
 const responsive = {
-  0: { items: 1 },
-  568: { items: 1 },
-  1000: {
+  0: { items: 1, itemsFit: "contain" },
+
+  1300: {
     items: 2,
     itemsFit: "contain",
   },
@@ -37,14 +37,11 @@ const Reviews: FC<IProps> = ({ items }) => {
       <Wrapper>
         <AliceCarousel
           animationDuration={1200}
-          // disableButtonsControls={true}
           disableDotsControls={true}
           infinite
           items={items}
           mouseTracking
           responsive={responsive}
-          // activeIndex={activeIndex}
-          // onSlideChanged={syncActiveIndex}
           renderNextButton={renderNextButton}
           renderPrevButton={renderPrevButton}
         />

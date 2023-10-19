@@ -97,8 +97,8 @@ const questions = [
 });
 
 const Main: FC = () => {
-  const [res1300, res900, res630] = [
-    useMediaQuery({ query: "(min-width: 1301px)" }),
+  const [res1360, res900, res630] = [
+    useMediaQuery({ query: "(min-width: 1361px)" }),
     useMediaQuery({ query: "(min-width: 901px)" }),
     useMediaQuery({ query: "(min-width: 631px)" }),
   ];
@@ -122,7 +122,7 @@ const Main: FC = () => {
           </Container>
         );
       })}
-      {res1300 && <ScrollToTop />}
+      {res1360 && <ScrollToTop />}
     </Content>
   );
 };
