@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -11,9 +11,9 @@ interface IProps {
 }
 
 const responsive = {
-  0: { items: 1 },
-  568: { items: 2 },
-  1000: {
+  0: { items: 1, itemsFit: "contain" },
+  700: { items: 2, itemsFit: "contain" },
+  1100: {
     items: 3,
     itemsFit: "contain",
   },

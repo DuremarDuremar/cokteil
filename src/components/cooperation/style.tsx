@@ -9,9 +9,15 @@ export const Content = styled.section`
   }
 `;
 export const Bloсks = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
   column-gap: 120px;
+  @media (max-width: 1410px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 40px;
+  }
 `;
 export const Block = styled.div`
   text-align: center;

@@ -17,6 +17,9 @@ export const Wrapper = styled.div`
     width: 100%;
     background-size: cover;
     margin-left: 80px;
+    @media (max-width: 700px) {
+      margin-left: 60px;
+    }
   }
 `;
 
