@@ -104,7 +104,6 @@ const Main: FC = () => {
   ];
 
   const components = [
-    { component: <Welcome />, mt: "50px" },
     { component: <Advantage /> },
     { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
     { component: <Reviews items={comments} /> },
@@ -117,7 +116,7 @@ const Main: FC = () => {
     <Content>
       {components.map((item, index) => {
         return (
-          <Container key={index} padding={item.padding} mt={item.mt}>
+          <Container key={index} padding={item.padding}>
             {item.component}
           </Container>
         );

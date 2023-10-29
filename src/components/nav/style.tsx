@@ -1,13 +1,14 @@
 import styled from "styled-components";
 export const Content = styled.div`
-  position: relative;
+  width: 600px;
+  /* height: 875px; */
+  z-index: 2;
+  position: absolute;
 `;
 
 export const Wrapper = styled.div`
-  position: absolute;
-  background: #fffdf5;
-  width: 120%;
-  height: 875px;
+  /* position: absolute;
+  background: #fffdf5; */
 `;
 
 export const List = styled.nav`
@@ -15,7 +16,7 @@ export const List = styled.nav`
   color: #fffdf5;
   box-shadow: 0px 4px 20px 0px rgba(51, 51, 51, 0.05);
   width: 278px;
-  height: 855px;
+  height: 92vh;
   font-size: 14px;
   ul {
     display: flex;

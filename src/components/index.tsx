@@ -12,3 +12,4 @@ export { default as Invite } from "./invite";
 export { default as Footer } from "./footer";
 export { default as Nav } from "./nav";
 export { default as Profile } from "./profile";
+export { default as Start } from "./start";

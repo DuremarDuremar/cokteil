@@ -8,7 +8,7 @@ export const Content = styled.div`
   height: 148px;
   background: #fffdf5;
   box-shadow: 0px 4px 20px 0px rgba(51, 51, 51, 0.05);
-  top: 100%;
+  top: 10%;
   right: 9%;
   display: flex;
   flex-direction: column;

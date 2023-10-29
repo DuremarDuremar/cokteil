@@ -5,7 +5,8 @@ export const Content = styled.header`
   padding: 0 8.9%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  position: relative;
+  /* position: relative; */
+
   > div {
     width: 100%;
   }
