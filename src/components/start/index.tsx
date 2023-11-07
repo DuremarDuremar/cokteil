@@ -24,7 +24,7 @@ const Start: FC = () => {
         setProf={setProf}
       />
       <Container mt={"50px"}>
-        <Welcome />
+        <Welcome burger={burger} />
       </Container>
     </Content>
   );

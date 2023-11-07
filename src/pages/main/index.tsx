@@ -1,7 +1,5 @@
 import React, { FC } from "react";
-import { useMediaQuery } from "react-responsive";
 import {
-  Welcome,
   Advantage,
   Stock,
   Card,
@@ -96,13 +94,11 @@ const questions = [
   return <Accordion header={item.header} text={item.text} key={index} />;
 });
 
-const Main: FC = () => {
-  const [res1360, res900, res630] = [
-    useMediaQuery({ query: "(min-width: 1361px)" }),
-    useMediaQuery({ query: "(min-width: 901px)" }),
-    useMediaQuery({ query: "(min-width: 631px)" }),
-  ];
+interface IProps {
+  res1360: boolean;
+}
 
+const Main: FC<IProps> = ({ res1360 }) => {
   const components = [
     { component: <Advantage /> },
     { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
