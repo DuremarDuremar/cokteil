@@ -1,16 +1,42 @@
 import styled from "styled-components";
-export const Content = styled.footer`
+
+export const Wrapper = styled.div`
   background: #514a7e;
   color: #fffdf5;
-  margin-top: 150px;
+
+  @media (max-width: 1361px) {
+    padding-top: 43px;
+    margin-top: -1px;
+  }
+
+  img {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    @media (max-width: 1361px) {
+      margin-left: 11px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
+
+export const Content = styled.footer`
   display: flex;
+  margin-top: 150px;
   padding: 82px 0 86px;
+  @media (max-width: 1361px) {
+    margin-top: 12px;
+    padding: 44px 0 28px;
+  }
 `;
 export const Block = styled.div`
   flex: 0 0 20%;
   display: flex;
   justify-content: center;
   scroll-behavior: smooth;
+  padding: 0 10px;
   &:last-child {
     align-items: end;
   }
@@ -48,13 +74,5 @@ export const Block = styled.div`
   }
   svg {
     fill: #fffdf5;
-  }
-  img {
-    opacity: 0.5;
-    cursor: pointer;
-    transition: all 0.7s ease-in-out;
-    &:hover {
-      opacity: 1;
-    }
   }
 `;

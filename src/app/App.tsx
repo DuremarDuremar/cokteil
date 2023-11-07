@@ -18,7 +18,10 @@ function App() {
       <Global />
       <Content>
         <Routes>
-          <Route path="/" element={<Layout res900={res900} />}>
+          <Route
+            path="/"
+            element={<Layout res900={res900} res1360={res1360} />}
+          >
             <Route index element={<Main res1360={res1360} />} />
             <Route path="catalog" element={<Catalog />} />
             <Route path="cart" element={<Cart />} />

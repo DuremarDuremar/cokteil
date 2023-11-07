@@ -1,76 +1,110 @@
-import React from "react";
+import React, { FC } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as SvgLinks } from "../../assets/links.svg";
 import { ReactComponent as SvgPhone } from "../../assets/phone.svg";
 import { ReactComponent as SvgTime } from "../../assets/time.svg";
 import logo from "../../assets/logo.png";
-import { Content, Block } from "./style";
+import { Wrapper, Content, Block } from "./style";
 
-const Footer = () => {
+const words = [
+  {
+    header: "Информация",
+    links: [
+      "Главная",
+      "Акции",
+      "Каталог",
+      "Возврат",
+      "Доставка",
+      "Партнёрам",
+      "Способы оплаты",
+      "Как сделать заказ?",
+    ],
+  },
+  {
+    header: "Мой кабинет",
+    links: ["Мои заказы", "Мои адреса", "Мои скидки", "Моя информация"],
+  },
+  {
+    header: "Сотрудничество",
+    links: [
+      "Становитесь партнёром",
+      "Рекламируйте товары",
+      "Приводите покупателей",
+      "Получайте бонусы",
+    ],
+  },
+  {
+    header: "Контакты",
+    links: [
+      "ИП Вишневский Иван Сергеевич государственная регистрация №690867884 от 31.07.2020. Логойским горисполкомом Защита прав потребителей +375259990755",
+    ],
+  },
+];
+
+interface IProps {
+  res1360: boolean;
+}
+
+const name = (
+  <div
+    onClick={() => {
+      scroll.scrollToTop();
+    }}
+  >
+    <img src={logo} alt="logo" />
+  </div>
+);
+
+const Footer: FC<IProps> = ({ res1360 }) => {
   return (
-    <Content>
-      <Block>
-        <div>
-          <h3>Информация</h3>
-          <ul>
-            <li>Главная</li>
-            <li>Акции</li>
-            <li>Каталог</li>
-            <li>Возврат</li>
-            <li>Доставка</li>
-            <li>Партнёрам</li>
-            <li>Способы оплаты</li>
-            <li>Как сделать заказ?</li>
-          </ul>
-        </div>
-      </Block>
-      <Block>
-        <div>
-          <h3>Мой кабинет</h3>
-          <ul>
-            <li>Мои заказы</li>
-            <li>Мои адреса</li>
-            <li>Мои скидки</li>
-            <li>Моя информация</li>
-          </ul>
-        </div>
-      </Block>
-      <Block>
-        <div>
-          <h3>Контактная информация</h3>
-          <p>
-            ИП Вишневский Иван Сергеевич государственная регистрация №690867884
-            от 31.07.2020. Логойским горисполкомом Защита прав потребителей
-            +375259990755
-          </p>
-        </div>
-      </Block>
-      <Block>
-        <div>
+    <Wrapper>
+      {!res1360 && name}
+      <Content>
+        <Block>
           <div>
-            <h3>Соц. сети</h3>
-            <SvgLinks />
+            <h3>{words[0].header}</h3>
+            <ul>
+              {words[0].links.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
+        </Block>
+        <Block>
           <div>
-            <SvgPhone />
-            <span>+375255990755</span>
+            <h3>{words[1].header}</h3>
+            <ul>
+              {words[1].links.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
+        </Block>
+        <Block>
           <div>
-            <SvgTime />
-            <span>круглосуточно, без выходных</span>
+            <h3>Контактная информация</h3>
+            <p>{words[3].links[0]}</p>
           </div>
-        </div>
-      </Block>
-      <Block>
-        <div
-          onClick={() => {
-            scroll.scrollToTop();
-          }}
-        >
-          <img src={logo} alt="logo" />
-        </div>
-      </Block>
-    </Content>
+        </Block>
+        <Block>
+          <div>
+            <div>
+              <h3>Соц. сети</h3>
+              <SvgLinks />
+            </div>
+            <div>
+              <SvgPhone />
+              <span>+375255990755</span>
+            </div>
+            <div>
+              <SvgTime />
+              <span>круглосуточно, без выходных</span>
+            </div>
+          </div>
+        </Block>
+        <Block>{res1360 && name}</Block>
+      </Content>
+    </Wrapper>
   );
 };
 
