@@ -7,7 +7,7 @@ const Layout: FC = () => {
   return (
     <Content>
       <Start />
-      <div className="noscroll">
+      <div className="scroll">
         <Outlet />
         <Footer />
       </div>

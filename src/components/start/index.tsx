@@ -8,10 +8,15 @@ const Start: FC = () => {
   const [burger, setBurger] = useState<boolean>(false);
   const [prof, setProf] = useState<boolean>(false);
 
-  console.log(prof, "prof");
+  // console.log(prof, "prof");
 
   return (
-    <Content onClick={() => setProf(false)}>
+    <Content
+      onClick={() => {
+        setProf(false);
+        burger === true && setBurger(false);
+      }}
+    >
       <Header
         burger={burger}
         setBurger={setBurger}

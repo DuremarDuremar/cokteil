@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { ReactComponent as SvgArrow } from "../assets/arrowLit.svg";
 
 const Content = styled.div`
@@ -60,11 +60,14 @@ const ScrollToTop = () => {
     <Content>
       <ToTop
         activeClass="active"
-        to="noscroll"
+        to="scroll"
         spy={true}
-        smooth={true}
-        offset={-150}
+        // smooth={true}
+        offset={50}
         duration={500}
+        onClick={() => {
+          scroll.scrollToTop();
+        }}
       >
         <SvgArrow />
       </ToTop>
