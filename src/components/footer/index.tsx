@@ -1,10 +1,11 @@
 import React, { FC } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import Accordion from "../accordion";
 import { ReactComponent as SvgLinks } from "../../assets/links.svg";
 import { ReactComponent as SvgPhone } from "../../assets/phone.svg";
 import { ReactComponent as SvgTime } from "../../assets/time.svg";
 import logo from "../../assets/logo.png";
-import { Wrapper, Content, Block } from "./style";
+import { Wrapper, Content, Block, Accordions } from "./style";
 
 const words = [
   {
@@ -55,37 +56,59 @@ const name = (
   </div>
 );
 
+const bloks = [
+  <>
+    <h3>{words[0].header}</h3>
+    <ul>
+      {words[0].links.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  </>,
+  <>
+    <h3>{words[1].header}</h3>
+    <ul>
+      {words[1].links.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  </>,
+  <>
+    <h3>Контактная информация</h3>
+    <p>{words[3].links[0]}</p>
+  </>,
+];
+
 const Footer: FC<IProps> = ({ res1360 }) => {
   return (
     <Wrapper>
       {!res1360 && name}
+
       <Content>
-        <Block>
-          <div>
-            <h3>{words[0].header}</h3>
-            <ul>
-              {words[0].links.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <h3>{words[1].header}</h3>
-            <ul>
-              {words[1].links.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </Block>
-        <Block>
-          <div>
-            <h3>Контактная информация</h3>
-            <p>{words[3].links[0]}</p>
-          </div>
-        </Block>
+        {res1360 ? (
+          bloks.map((item, index) => {
+            return (
+              <Block key={index}>
+                <div>{item}</div>
+              </Block>
+            );
+          })
+        ) : (
+          <Block>
+            <Accordions>
+              {words.map((item, index) => {
+                return (
+                  <Accordion
+                    key={index}
+                    header={item.header}
+                    text={item.links}
+                  />
+                );
+              })}
+            </Accordions>
+          </Block>
+        )}
+
         <Block>
           <div>
             <div>
@@ -102,7 +125,7 @@ const Footer: FC<IProps> = ({ res1360 }) => {
             </div>
           </div>
         </Block>
-        <Block>{res1360 && name}</Block>
+        {res1360 && <Block>{name}</Block>}
       </Content>
     </Wrapper>
   );

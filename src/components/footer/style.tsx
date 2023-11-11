@@ -32,14 +32,20 @@ export const Content = styled.footer`
   }
 `;
 export const Block = styled.div`
-  flex: 0 0 20%;
   display: flex;
+  flex: 0 0 20%;
+  @media (max-width: 1361px) {
+    flex: 0 0 40%;
+  }
   justify-content: center;
   scroll-behavior: smooth;
   padding: 0 10px;
-  &:last-child {
-    align-items: end;
+  @media (min-width: 1360px) {
+    &:last-child {
+      align-items: end;
+    }
   }
+
   &:nth-child(4) {
     > div {
       display: flex;
@@ -75,4 +81,9 @@ export const Block = styled.div`
   svg {
     fill: #fffdf5;
   }
+`;
+
+export const Accordions = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
