@@ -14,7 +14,11 @@ export const Wrapper = styled.div`
     cursor: pointer;
     transition: all 0.7s ease-in-out;
     @media (max-width: 1361px) {
-      margin-left: 11px;
+      margin: 10px 0 10px 8vw;
+      width: 12vw;
+      height: 12vw;
+      min-width: 80px;
+      min-height: 80px;
     }
     &:hover {
       opacity: 1;
@@ -27,19 +31,23 @@ export const Content = styled.footer`
   margin-top: 150px;
   padding: 82px 0 86px;
   @media (max-width: 1361px) {
-    margin-top: 12px;
+    margin-top: 0px;
     padding: 44px 0 28px;
   }
 `;
 export const Block = styled.div`
   display: flex;
   flex: 0 0 20%;
+  justify-content: center;
+  padding: 0 10px;
   @media (max-width: 1361px) {
     flex: 0 0 40%;
+    justify-content: start;
+    padding: 0 8vw;
   }
-  justify-content: center;
+
   scroll-behavior: smooth;
-  padding: 0 10px;
+
   @media (min-width: 1360px) {
     &:last-child {
       align-items: end;

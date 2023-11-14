@@ -23,6 +23,10 @@ export const Header = styled.div`
 
 export const Body = styled.div`
   padding: 15px 5px;
+  ul {
+    max-width: 200px;
+    width: 100%;
+  }
 `;
 
 export const Corner = styled.div<{
