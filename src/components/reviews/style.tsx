@@ -40,7 +40,7 @@ export const AddReview = styled.div`
   }
 `;
 
-export const ButtonSlider = styled.button<{}>`
+export const ButtonSlider = styled.button`
   width: 92px;
   height: 92px;
   position: absolute;

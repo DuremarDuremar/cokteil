@@ -24,3 +24,12 @@ export const Header = styled.div`
 export const Body = styled.div`
   padding: 15px 5px;
 `;
+
+export const Corner = styled.div<{
+  show: boolean;
+}>`
+  width: 10px;
+  height: 10px;
+  transform: ${({ show }) => show && "rotate(180deg)"};
+  margin-left: 20px;
+`;

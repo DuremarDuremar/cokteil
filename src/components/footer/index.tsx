@@ -101,7 +101,7 @@ const Footer: FC<IProps> = ({ res1360 }) => {
                   <Accordion
                     key={index}
                     header={item.header}
-                    text={item.links}
+                    links={item.links}
                   />
                 );
               })}
