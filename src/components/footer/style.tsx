@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     cursor: pointer;
     transition: all 0.7s ease-in-out;
     @media (max-width: 1361px) {
-      margin: 10px 0 10px 8vw;
+      margin: 10px 0 10px 5vw;
       width: 12vw;
       height: 12vw;
       min-width: 80px;
@@ -32,7 +32,7 @@ export const Content = styled.footer`
   padding: 82px 0 86px;
   @media (max-width: 1361px) {
     margin-top: 0px;
-    padding: 44px 0 28px;
+    padding: 44px 0;
   }
 `;
 export const Block = styled.div`
@@ -40,19 +40,19 @@ export const Block = styled.div`
   flex: 0 0 20%;
   justify-content: center;
   padding: 0 10px;
+  &:last-child {
+    align-items: end;
+  }
   @media (max-width: 1361px) {
-    flex: 0 0 40%;
+    flex: 1 1 40%;
     justify-content: start;
-    padding: 0 8vw;
+    padding: 0 2vw;
+    &:last-child {
+      flex: 1 1 20%;
+    }
   }
 
   scroll-behavior: smooth;
-
-  @media (min-width: 1360px) {
-    &:last-child {
-      align-items: end;
-    }
-  }
 
   &:nth-child(4) {
     > div {
@@ -73,6 +73,9 @@ export const Block = styled.div`
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
+    @media (max-width: 1361px) {
+      font-size: 15px;
+    }
   }
   ul {
     font-size: 12px;
@@ -94,4 +97,22 @@ export const Block = styled.div`
 export const Accordions = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const Top = styled.div`
+  width: 11vw;
+  height: 11vw;
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    rotate: -90deg;
+    height: 1vw;
+    fill: #514a7e;
+  }
 `;

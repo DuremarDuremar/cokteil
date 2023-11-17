@@ -14,6 +14,7 @@ export const WelcomeTop = styled.div`
     width: 100%;
     background: lightgray 50% / cover no-repeat;
     box-shadow: 0px 4px 10px 0px rgba(81, 74, 126, 0.4);
+    min-width: 200px;
   }
 
   div:first-child {
@@ -36,6 +37,9 @@ export const WelcomeTop = styled.div`
     font-size: 60px;
     font-weight: 300;
     line-height: 115%;
+    @media (max-width: 1361px) {
+      font-size: 40px;
+    }
   }
   strong {
     font-family: "Bad Script", cursive;

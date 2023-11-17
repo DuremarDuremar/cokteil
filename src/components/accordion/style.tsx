@@ -6,6 +6,10 @@ export const Content = styled.div`
 
 export const Header = styled.div`
   height: 55px;
+  @media (max-width: 1361px) {
+    height: 34px;
+    font-size: 15px;
+  }
   cursor: pointer;
   display: flex;
   align-items: center;

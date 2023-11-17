@@ -8,6 +8,7 @@ import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
 
 interface IProps {
   items: JSX.Element[];
+  res1360: boolean;
 }
 const responsive = {
   0: { items: 1, itemsFit: "contain" },
@@ -18,7 +19,7 @@ const responsive = {
   },
 };
 
-const Reviews: FC<IProps> = ({ items }) => {
+const Reviews: FC<IProps> = ({ items, res1360 }) => {
   const renderNextButton = () => {
     return (
       <ButtonSlider>
@@ -37,7 +38,8 @@ const Reviews: FC<IProps> = ({ items }) => {
       <Wrapper>
         <AliceCarousel
           animationDuration={1200}
-          disableDotsControls={true}
+          disableDotsControls={res1360 ? true : false}
+          disableButtonsControls={!res1360 ? true : false}
           infinite
           items={items}
           mouseTracking

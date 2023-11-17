@@ -102,7 +102,7 @@ const Main: FC<IProps> = ({ res1360 }) => {
   const components = [
     { component: <Advantage /> },
     { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
-    { component: <Reviews items={comments} /> },
+    { component: <Reviews items={comments} res1360={res1360} /> },
     { component: <Faq items={questions} /> },
     { component: <Cooperation /> },
     { component: <Invite />, padding: "0 0" },

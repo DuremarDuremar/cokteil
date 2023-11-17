@@ -51,6 +51,7 @@ export const ButtonSlider = styled.button`
   border-radius: 50%;
   transition: all 0.7s ease-in-out;
   background: #fffdf5;
+
   svg {
     width: 40px;
     height: 7px;

@@ -4,8 +4,9 @@ import Accordion from "../accordion";
 import { ReactComponent as SvgLinks } from "../../assets/links.svg";
 import { ReactComponent as SvgPhone } from "../../assets/phone.svg";
 import { ReactComponent as SvgTime } from "../../assets/time.svg";
+import { ReactComponent as SvgArrow } from "../../assets/arrowLit.svg";
 import logo from "../../assets/logo.png";
-import { Wrapper, Content, Block, Accordions } from "./style";
+import { Wrapper, Content, Block, Accordions, Top } from "./style";
 
 const words = [
   {
@@ -126,6 +127,17 @@ const Footer: FC<IProps> = ({ res1360 }) => {
           </div>
         </Block>
         {res1360 && <Block>{name}</Block>}
+        {!res1360 && (
+          <Block>
+            <Top
+              onClick={() => {
+                scroll.scrollToTop();
+              }}
+            >
+              <SvgArrow />
+            </Top>
+          </Block>
+        )}
       </Content>
     </Wrapper>
   );
