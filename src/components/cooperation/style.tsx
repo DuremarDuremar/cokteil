@@ -18,6 +18,11 @@ export const Bloсks = styled.div`
     grid-template-rows: repeat(2, 1fr);
     row-gap: 40px;
   }
+  @media (max-width: 631px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 40px;
+  }
 `;
 export const Block = styled.div`
   text-align: center;
