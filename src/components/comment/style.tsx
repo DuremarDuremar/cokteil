@@ -14,6 +14,7 @@ export const Content = styled.div`
   @media (max-width: 1361px) {
     width: 100%;
     justify-content: center;
+    gap: 5px;
   }
 
   /* @media (min-width: 1300px) {

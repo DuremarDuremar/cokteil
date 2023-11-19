@@ -5,8 +5,14 @@ const SubTitle = styled.div<{
   right?: string;
   left?: string;
 }>`
+  @media (max-width: 631px) {
+    text-align: center;
+  }
   h3 {
     font-size: 40px;
+    @media (max-width: 631px) {
+      font-size: 25px;
+    }
     font-weight: 300;
     line-height: 87.305%;
     position: relative;
@@ -21,6 +27,11 @@ const SubTitle = styled.div<{
       line-height: 87.305%;
       right: -120px;
       bottom: -20px;
+      @media (max-width: 631px) {
+        font-size: 25px;
+        right: -7vw;
+        bottom: -30px;
+      }
     }
   }
 `;
