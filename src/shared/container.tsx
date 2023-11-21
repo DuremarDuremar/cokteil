@@ -8,6 +8,9 @@ const Container = styled.div<{
   background: ${(props) => props.bc};
   margin-top: ${(props) => (props.mt ? props.mt : "150px")};
   padding: ${(props) => (props.padding ? props.padding : "0 8.9%")};
+  @media (max-width: 631px) {
+    padding: ${(props) => (props.padding ? props.padding : "0 10px")};
+  }
 `;
 
 export default Container;

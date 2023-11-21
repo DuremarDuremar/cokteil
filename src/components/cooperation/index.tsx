@@ -10,7 +10,20 @@ interface IProps {
   res630: boolean;
 }
 
-const blocks = [
+const blocks1 = [
+  ["Становитесь партнёром", "Регистрируйтесь и переходите в свой кабинет"],
+  [
+    "Рекламируйте товары",
+    "Рекламируйте наши товары на форумах, сайтах, в социальных сетях",
+  ],
+  [
+    "Приводите покупателей",
+    "Приводите покупателей на наш сайт по уникальной ссылке",
+  ],
+  ["Получайте бонусы", "Копите бонусы от каждого оплаченного заказа"],
+];
+
+const blocks2 = [
   <>
     <SvgCog />
     <Text size={14}>Автоматизация процессов</Text>
@@ -35,32 +48,20 @@ const Cooperation: FC<IProps> = ({ res630 }) => {
       <SubTitle>
         <h3>Сотрудничество с нами</h3>
       </SubTitle>
-      <Text size={16}>
+      <Text size={res630 ? 16 : 12}>
         Наша компания постоянно растёт и расширяет рынок, поэтому мы
         заинтересованы в новых партнёрах и рассматриваем новые проекты, которые
         могут быть привлекательны и интересны с коммерческой точки зрения.{" "}
       </Text>
       <Bloсks>
-        <Block>
-          <h4>Становитесь партнёром</h4>
-          <Text size={12}>Регистрируйтесь и переходите в свой кабинет</Text>
-        </Block>
-        <Block>
-          <h4>Рекламируйте товары</h4>
-          <Text size={12}>
-            Рекламируйте наши товары на форумах, сайтах, в социальных сетях
-          </Text>
-        </Block>
-        <Block>
-          <h4>Приводите покупателей</h4>
-          <Text size={12}>
-            Приводите покупателей на наш сайт по уникальной ссылке
-          </Text>
-        </Block>
-        <Block>
-          <h4>Получайте бонусы</h4>
-          <Text size={12}>Копите бонусы от каждого оплаченного заказа</Text>
-        </Block>
+        {blocks1.map((item, index) => {
+          return (
+            <Block key={index} noicons>
+              <h4>{item[0]}</h4>
+              {res630 && <Text size={12}>{item[1]}</Text>}
+            </Block>
+          );
+        })}
       </Bloсks>
       {res630 ? (
         <h4>Это выгодно. Какие преимущества?</h4>
@@ -69,14 +70,16 @@ const Cooperation: FC<IProps> = ({ res630 }) => {
           <h3>Какие преимущества?</h3>
         </SubTitle>
       )}
-      <Bloсks>
+      <Bloсks icons>
         {res630
-          ? blocks.map((item, index) => {
+          ? blocks2.map((item, index) => {
               return <Block key={index}>{item}</Block>;
             })
-          : [blocks[2], blocks[0], blocks[3], blocks[1]].map((item, index) => {
-              return <Block key={index}>{item}</Block>;
-            })}
+          : [blocks2[2], blocks2[0], blocks2[3], blocks2[1]].map(
+              (item, index) => {
+                return <Block key={index}>{item}</Block>;
+              }
+            )}
       </Bloсks>
     </Content>
   );
