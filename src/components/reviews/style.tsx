@@ -14,8 +14,19 @@ export const Wrapper = styled.div`
   margin-top: 6vw;
   position: relative;
 
-  ul {
+  .alice-carousel__wrapper ul {
     margin-left: 15px;
+    @media (max-width: 800px) {
+      margin-left: 11vw;
+    }
+    li {
+      @media (max-width: 800px) {
+        max-width: 70vw;
+        width: 100%;
+        background-size: cover;
+        margin-left: 20px;
+      }
+    }
   }
 
   /* li:not(:first-child) {

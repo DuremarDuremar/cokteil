@@ -16,7 +16,11 @@ export const Content = styled.div`
     justify-content: center;
     gap: 5px;
   }
-
+  @media (max-width: 631px) {
+    /* max-width: 316px; */
+    width: 100%;
+    gap: 3px;
+  }
   /* @media (min-width: 1300px) {
     max-width: 459px;
   } */
@@ -27,6 +31,13 @@ export const Foto = styled.div`
   img {
     width: 94px;
     height: 94px;
+  }
+  @media (max-width: 800px) {
+    min-width: 45px;
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
 `;
 
@@ -39,9 +50,9 @@ export const Info = styled.div`
   p {
     padding: 0 2px;
     max-width: 264px;
-    @media (max-width: 1361px) {
+    /* @media (max-width: 1361px) {
       max-width: 664px;
-    }
+    } */
     height: 82px;
     width: 100%;
     overflow-y: auto;

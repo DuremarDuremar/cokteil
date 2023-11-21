@@ -15,6 +15,7 @@ export const Bloсks = styled.div<{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   column-gap: 120px;
+  margin: 0px auto;
   @media (max-width: 1410px) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
