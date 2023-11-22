@@ -10,16 +10,16 @@ export const Wrapper = styled.div`
     /* width: 111%; */
   }
   ul {
-    margin-left: 11vw;
+    /* margin-left: 11vw; */
   }
   li {
     max-width: 278px;
     width: 100%;
     background-size: cover;
-    margin-left: 80px;
+    /* margin-left: 80px;
     @media (max-width: 700px) {
       margin-left: 60px;
-    }
+    } */
   }
 `;
 

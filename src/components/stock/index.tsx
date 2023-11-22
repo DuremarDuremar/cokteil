@@ -49,6 +49,7 @@ const Stock: FC<IProps> = ({ items }) => {
           responsive={responsive}
           renderNextButton={renderNextButton}
           renderPrevButton={renderPrevButton}
+          autoWidth={true}
         />
       </Wrapper>
     </Content>

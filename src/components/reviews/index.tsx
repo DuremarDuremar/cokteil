@@ -46,6 +46,7 @@ const Reviews: FC<IProps> = ({ items, res1360 }) => {
           responsive={responsive}
           renderNextButton={renderNextButton}
           renderPrevButton={renderPrevButton}
+          autoWidth={res1360 ? false : true}
         />
       </Wrapper>
       <AddReview>

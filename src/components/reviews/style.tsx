@@ -15,23 +15,19 @@ export const Wrapper = styled.div`
   position: relative;
 
   .alice-carousel__wrapper ul {
-    margin-left: 15px;
+    /* margin-left: 15px; */
     @media (max-width: 800px) {
-      margin-left: 11vw;
+      /* margin-left: 11vw; */
     }
     li {
       @media (max-width: 800px) {
         max-width: 70vw;
         width: 100%;
         background-size: cover;
-        margin-left: 20px;
+        /* margin-left: 20px; */
       }
     }
   }
-
-  /* li:not(:first-child) {
-    margin-left: 20px;
-  } */
 `;
 
 export const AddReview = styled.div`

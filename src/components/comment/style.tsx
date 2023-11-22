@@ -17,13 +17,9 @@ export const Content = styled.div`
     gap: 5px;
   }
   @media (max-width: 631px) {
-    /* max-width: 316px; */
     width: 100%;
     gap: 3px;
   }
-  /* @media (min-width: 1300px) {
-    max-width: 459px;
-  } */
 `;
 
 export const Foto = styled.div`
@@ -49,7 +45,7 @@ export const Info = styled.div`
   }
   p {
     padding: 0 2px;
-    max-width: 264px;
+    /* max-width: 264px; */
     /* @media (max-width: 1361px) {
       max-width: 664px;
     } */
