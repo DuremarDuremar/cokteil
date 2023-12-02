@@ -3,9 +3,15 @@ import styled from "styled-components";
 export const Content = styled.section``;
 
 export const Wrapper = styled.div`
-  margin-top: 8vw;
+  margin-top: calc(8vw + 10px);
   position: relative;
   overflow: hidden;
+  @media (max-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    column-gap: 4vw;
+  }
   > div {
     /* width: 111%; */
   }

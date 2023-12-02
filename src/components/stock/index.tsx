@@ -8,6 +8,7 @@ import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 
 interface IProps {
   items: JSX.Element[];
+  res900: boolean;
 }
 
 const responsive = {
@@ -23,7 +24,7 @@ const responsive = {
   },
 };
 
-const Stock: FC<IProps> = ({ items }) => {
+const Stock: FC<IProps> = ({ items, res900 }) => {
   const renderNextButton = () => {
     return (
       <ButtonSlider>
@@ -40,17 +41,25 @@ const Stock: FC<IProps> = ({ items }) => {
         <h3>Успей купить! </h3>
       </SubTitle>
       <Wrapper>
-        <AliceCarousel
-          animationDuration={800}
-          disableDotsControls={true}
-          infinite
-          items={items}
-          mouseTracking
-          responsive={responsive}
-          renderNextButton={renderNextButton}
-          renderPrevButton={renderPrevButton}
-          autoWidth={true}
-        />
+        {res900 ? (
+          <AliceCarousel
+            animationDuration={800}
+            disableDotsControls={true}
+            infinite
+            items={items}
+            mouseTracking
+            responsive={responsive}
+            renderNextButton={renderNextButton}
+            renderPrevButton={renderPrevButton}
+            autoWidth={true}
+          />
+        ) : (
+          <>
+            {items.map((item, index) => {
+              return item;
+            })}
+          </>
+        )}
       </Wrapper>
     </Content>
   );

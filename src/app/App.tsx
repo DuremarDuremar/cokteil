@@ -22,13 +22,20 @@ function App() {
             path="/"
             element={<Layout res900={res900} res1360={res1360} />}
           >
-            <Route index element={<Main res1360={res1360} res630={res630} />} />
+            <Route
+              index
+              element={
+                <Main res1360={res1360} res630={res630} res900={res900} />
+              }
+            />
             <Route path="catalog" element={<Catalog />} />
             <Route path="cart" element={<Cart />} />
             <Route path="lot/:id" element={<Lot />} />
             <Route
               path="*"
-              element={<Main res1360={res1360} res630={res630} />}
+              element={
+                <Main res1360={res1360} res630={res630} res900={res900} />
+              }
             />
           </Route>
           <Route path="log" element={<Log />} />

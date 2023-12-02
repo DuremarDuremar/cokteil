@@ -2,23 +2,11 @@ import styled from "styled-components";
 
 export const Content = styled.section``;
 
-// export const Title = styled.div`
-//   h3 {
-//     font-size: 40px;
-//     font-weight: 300;
-//     line-height: 87.305%;
-//   }
-// `;
-
 export const Wrapper = styled.div`
   margin-top: 6vw;
   position: relative;
 
   .alice-carousel__wrapper ul {
-    /* margin-left: 15px; */
-    @media (max-width: 800px) {
-      /* margin-left: 11vw; */
-    }
     li {
       @media (max-width: 800px) {
         max-width: 70vw;

@@ -96,13 +96,17 @@ const questions = [
 
 interface IProps {
   res1360: boolean;
+  res900: boolean;
   res630: boolean;
 }
 
-const Main: FC<IProps> = ({ res1360, res630 }) => {
+const Main: FC<IProps> = ({ res1360, res630, res900 }) => {
   const components = [
     { component: <Advantage /> },
-    { component: <Stock items={cards} />, padding: "0 0 0 8.9%" },
+    {
+      component: <Stock items={cards} res900={res900} />,
+      padding: "0 0 0 8.9%",
+    },
     { component: <Reviews items={comments} res1360={res1360} /> },
     { component: <Faq items={questions} /> },
     { component: <Cooperation res630={res630} /> },
