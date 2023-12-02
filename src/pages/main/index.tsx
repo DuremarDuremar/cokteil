@@ -105,7 +105,7 @@ const Main: FC<IProps> = ({ res1360, res630, res900 }) => {
     { component: <Advantage /> },
     {
       component: <Stock items={cards} res900={res900} />,
-      padding: "0 0 0 8.9%",
+      padding: res900 ? "0 0 0 8.9%" : "0 8px",
     },
     { component: <Reviews items={comments} res1360={res1360} /> },
     { component: <Faq items={questions} /> },

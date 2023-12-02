@@ -10,6 +10,7 @@ export const Foto = styled.div`
 
 export const Details = styled.div`
   display: flex;
+  margin-top: 13px;
 `;
 export const Info = styled.div`
   max-width: 148px;
@@ -31,6 +32,9 @@ export const Info = styled.div`
     font-weight: 300;
     padding-left: 23px;
     position: relative;
+    @media (max-width: 900px) {
+      padding-left: 5px;
+    }
     :before {
       content: "";
       display: block;
@@ -40,6 +44,10 @@ export const Info = styled.div`
       height: 0.5px;
       top: 50%;
       right: -20%;
+      @media (max-width: 900px) {
+        width: 42px;
+        right: -5%;
+      }
     }
   }
 

@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
     max-width: 278px;
     width: 100%;
     background-size: cover;
+    margin-left: 50px;
     /* margin-left: 80px;
     @media (max-width: 700px) {
       margin-left: 60px;
