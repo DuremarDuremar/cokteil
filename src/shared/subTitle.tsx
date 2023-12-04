@@ -10,7 +10,7 @@ const SubTitle = styled.div<{
   }
   h3 {
     font-size: 40px;
-    @media (max-width: 631px) {
+    @media (max-width: 700px) {
       font-size: 25px;
     }
     font-weight: 300;
@@ -29,7 +29,7 @@ const SubTitle = styled.div<{
       bottom: -20px;
       @media (max-width: 631px) {
         font-size: 25px;
-        right: -7vw;
+        right: -2vw;
         bottom: -30px;
       }
     }

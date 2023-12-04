@@ -20,6 +20,9 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 13px;
+  @media (max-width: 630px) {
+    flex: 75%;
+  }
   p,
   span {
     color: #7d7d7d;
@@ -65,6 +68,9 @@ export const Info = styled.div`
 
   div:last-child {
     position: relative;
+    @media (max-width: 900px) {
+      display: none;
+    }
 
     svg {
       width: 26px;
@@ -92,8 +98,16 @@ export const Buy = styled.div`
   justify-content: center;
   flex: 40%;
   cursor: pointer;
+  @media (max-width: 630px) {
+    flex: 25%;
+  }
+
   svg {
     width: 30px;
     height: 30px;
+    @media (max-width: 630px) {
+      width: 17px;
+      height: 17px;
+    }
   }
 `;
