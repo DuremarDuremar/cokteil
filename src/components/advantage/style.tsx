@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 export const Content = styled.section`
-  margin-right: 11vw;
+  @media (min-width: 631px) {
+    margin-right: 10vw;
+  }
 `;
 
 export const Grid = styled.div`
   margin-top: 93px;
-  display: grid;
-  grid-template-areas:
-    "a b c d"
-    "z z x x";
-  gap: 7vw;
-  min-height: 236px;
+
+  @media (min-width: 631px) {
+    min-height: 236px;
+    display: grid;
+    grid-template-areas:
+      "a b c d"
+      "z z x x";
+    gap: 7vw;
+  }
 `;
 
 export const Item = styled.div<{
@@ -98,4 +103,21 @@ export const Item = styled.div<{
     }    
 }
     `}
+`;
+
+export const Card = styled.div`
+  border-radius: 10px;
+  background: #514a7e;
+  max-width: 150px;
+  width: 100%;
+  height: 78px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  p {
+    color: #fffdf5;
+    text-align: center;
+    font-size: 14px;
+    line-height: 118%;
+  }
 `;

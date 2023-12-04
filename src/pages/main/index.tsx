@@ -102,7 +102,7 @@ interface IProps {
 
 const Main: FC<IProps> = ({ res1360, res630, res900 }) => {
   const components = [
-    { component: <Advantage /> },
+    { component: <Advantage res630={res630} /> },
     {
       component: <Stock items={cards} res900={res900} />,
       padding: res900 ? "0 0 0 8.9%" : "0 8px",
