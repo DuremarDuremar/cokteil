@@ -9,6 +9,11 @@ export const Content = styled.section`
 export const Grid = styled.div`
   margin-top: 93px;
 
+  @media (max-width: 630px) {
+    margin-right: 40px;
+    position: relative;
+  }
+
   @media (min-width: 631px) {
     min-height: 236px;
     display: grid;
@@ -119,5 +124,22 @@ export const Card = styled.div`
     text-align: center;
     font-size: 14px;
     line-height: 118%;
+  }
+`;
+
+export const Btn = styled.div`
+  width: 30px;
+  height: 30px;
+  background-color: #fffdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: -30px;
+  cursor: pointer;
+  svg {
+    fill: #514a7e;
+    /* width: 16px; */
   }
 `;

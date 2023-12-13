@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Content, Grid, Item, Card } from "./style";
+import { ReactComponent as SvgArrow } from "../../assets/next.svg";
+import { Content, Grid, Item, Card, Btn } from "./style";
 import { SubTitle } from "../../shared";
 
 interface IProps {
@@ -23,7 +24,11 @@ const Advantage: FC<IProps> = ({ res630 }) => {
   ];
 
   const renderNextButton = () => {
-    return <></>;
+    return (
+      <Btn>
+        <SvgArrow />
+      </Btn>
+    );
   };
   const renderPrevButton = () => {
     return <></>;
