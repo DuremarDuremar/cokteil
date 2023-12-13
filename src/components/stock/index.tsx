@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -25,6 +25,8 @@ const responsive = {
 };
 
 const Stock: FC<IProps> = ({ items, res900 }) => {
+  const [number, setNumber] = useState(4);
+
   const renderNextButton = () => {
     return (
       <ButtonSlider>
@@ -56,9 +58,14 @@ const Stock: FC<IProps> = ({ items, res900 }) => {
         ) : (
           <>
             {items.map((item, index) => {
-              return item;
+              if (index < number) {
+                return item;
+              }
             })}
           </>
+        )}
+        {!res900 && items.length > number && (
+          <div onClick={() => setNumber(number + 2)}>234</div>
         )}
       </Wrapper>
     </Content>
