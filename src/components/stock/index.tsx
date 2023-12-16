@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import { Content, Wrapper, ButtonSlider } from "./style";
+import { Content, Wrapper, ButtonSlider, NewItems } from "./style";
 import { SubTitle } from "../../shared";
 import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 
@@ -61,13 +61,17 @@ const Stock: FC<IProps> = ({ items, res900 }) => {
               if (index < number) {
                 return item;
               }
+              return;
             })}
           </>
         )}
-        {!res900 && items.length > number && (
-          <div onClick={() => setNumber(number + 2)}>234</div>
-        )}
       </Wrapper>
+      {!res900 && items.length > number && (
+        <NewItems onClick={() => setNumber(number + 2)}>
+          <p>Смотреть еще</p>
+          <SvgArrow />
+        </NewItems>
+      )}
     </Content>
   );
 };

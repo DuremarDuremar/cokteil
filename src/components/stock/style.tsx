@@ -53,3 +53,22 @@ export const ButtonSlider = styled.button<{
     }
   }
 `;
+
+export const NewItems = styled.div`
+  margin: 30px auto 0;
+  width: 148px;
+  height: 36.842px;
+  border: 0.5px solid #514a7e;
+  background: #514a7e;
+  color: #fffdf5;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    width: 19px;
+    fill: #fffdf5;
+    margin-left: 5px;
+  }
+`;

@@ -11,7 +11,7 @@ interface IProps {
 const Layout: FC<IProps> = ({ res900, res1360 }) => {
   return (
     <Content>
-      <Start />
+      <Start res900={res900} />
       <div className="scroll">
         <Outlet />
         <Footer res1360={res1360} />
