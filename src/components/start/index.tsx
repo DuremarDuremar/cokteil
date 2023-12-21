@@ -28,8 +28,12 @@ const Start: FC<IProps> = ({ res900 }) => {
       setProf={setProf}
       search={res900 ? search : null}
     />,
-    <Container mt={"50px"}>
-      <Welcome burger={burger} res900={res900} />
+    <Container mt={!res900 ? "0" : "50px"}>
+      <Welcome
+        burger={burger}
+        res900={res900}
+        search={!res900 ? search : null}
+      />
     </Container>,
   ].map((item, index) => <div key={index}>{item}</div>);
 
@@ -40,7 +44,6 @@ const Start: FC<IProps> = ({ res900 }) => {
         burger === true && setBurger(false);
       }}
     >
-      {!res900 ? search : null}
       {res900 ? order : order.reverse()}
     </Content>
   );

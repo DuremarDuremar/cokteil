@@ -2,16 +2,18 @@ import React, { FC } from "react";
 import main_1 from "../../assets/main1.png";
 import main_2 from "../../assets/main2.png";
 import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
-import { Content, WelcomeBottom, WelcomeTop } from "./style";
+import { Content, WelcomeBottom, WelcomeTop, SearchAdap } from "./style";
 
 interface IProps {
   burger: boolean;
   res900: boolean;
+  search: JSX.Element | null;
 }
 
-const Welcome: FC<IProps> = ({ burger, res900 }) => {
+const Welcome: FC<IProps> = ({ burger, res900, search }) => {
   return (
     <Content>
+      {search && <SearchAdap>{search}</SearchAdap>}
       <WelcomeTop>
         <div>
           {res900 && (
