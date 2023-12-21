@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import main_1 from "../../assets/main1.png";
 
 export const Content = styled.section`
-  /* min-height: 716px; */
-  /* background: lightgray; */
+  @media (max-width: 900px) {
+    background: url(${main_1});
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 export const WelcomeTop = styled.div`
   display: flex;

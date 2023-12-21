@@ -20,6 +20,19 @@ const Start: FC<IProps> = ({ res900 }) => {
     </Search>
   );
 
+  const order = [
+    <Header
+      burger={burger}
+      setBurger={setBurger}
+      prof={prof}
+      setProf={setProf}
+      search={res900 ? search : null}
+    />,
+    <Container mt={"50px"}>
+      <Welcome burger={burger} res900={res900} />
+    </Container>,
+  ].map((item, index) => <div key={index}>{item}</div>);
+
   return (
     <Content
       onClick={() => {
@@ -27,16 +40,8 @@ const Start: FC<IProps> = ({ res900 }) => {
         burger === true && setBurger(false);
       }}
     >
-      <Header
-        burger={burger}
-        setBurger={setBurger}
-        prof={prof}
-        setProf={setProf}
-        search={res900 ? search : null}
-      />
-      <Container mt={"50px"}>
-        <Welcome burger={burger} />
-      </Container>
+      {!res900 ? search : null}
+      {res900 ? order : order.reverse()}
     </Content>
   );
 };

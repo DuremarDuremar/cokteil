@@ -6,14 +6,20 @@ import { Content, WelcomeBottom, WelcomeTop } from "./style";
 
 interface IProps {
   burger: boolean;
+  res900: boolean;
 }
 
-const Welcome: FC<IProps> = ({ burger }) => {
+const Welcome: FC<IProps> = ({ burger, res900 }) => {
   return (
     <Content>
       <WelcomeTop>
         <div>
-          <img src={main_1} alt="main1" />
+          {res900 && (
+            <div>
+              {" "}
+              <img src={main_1} alt="main1" />
+            </div>
+          )}
           {!burger && (
             <h2>
               Добро пожаловать <br /> в <strong>Cocteil</strong>
@@ -25,9 +31,11 @@ const Welcome: FC<IProps> = ({ burger }) => {
           </p>
         </div>
 
-        <div>
-          <img src={main_2} alt="main2" />
-        </div>
+        {res900 && (
+          <div>
+            <img src={main_2} alt="main2" />
+          </div>
+        )}
       </WelcomeTop>
       <WelcomeBottom>
         <div>
