@@ -2,10 +2,16 @@ import styled from "styled-components";
 import main_1 from "../../assets/main1.png";
 
 export const Content = styled.section`
+  img {
+    filter: brightness(40%);
+  }
+
   @media (max-width: 900px) {
-    background: url(${main_1});
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url(${main_1});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
 `;
 export const WelcomeTop = styled.div`

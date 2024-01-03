@@ -28,7 +28,7 @@ const Start: FC<IProps> = ({ res900 }) => {
       setProf={setProf}
       search={res900 ? search : null}
     />,
-    <Container mt={!res900 ? "0" : "50px"}>
+    <Container mt={!res900 ? "0" : "50px"} padding={!res900 ? "0" : "0 8.9%"}>
       <Welcome
         burger={burger}
         res900={res900}
