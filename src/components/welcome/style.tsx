@@ -2,10 +2,6 @@ import styled from "styled-components";
 import main_1 from "../../assets/main1.png";
 
 export const Content = styled.section`
-  img {
-    filter: brightness(40%);
-  }
-
   @media (max-width: 900px) {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url(${main_1});
@@ -82,7 +78,8 @@ export const WelcomeTop = styled.div`
     @media (max-width: 900px) {
       color: #fffdf5;
       font-size: 14px;
-      max-width: 220px;
+      max-width: 240px;
+      letter-spacing: 0.7px;
     }
   }
 `;
@@ -146,8 +143,10 @@ export const WelcomeBottom = styled.div`
 `;
 export const SearchAdap = styled.div`
   background-color: #fffdf5;
-  width: 80%;
+  width: 96%;
   height: 35px;
   border-radius: 10px;
   margin: 0px auto;
+  position: relative;
+  top: 35px;
 `;
