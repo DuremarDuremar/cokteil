@@ -5,7 +5,16 @@ export const Content = styled.header`
   padding: 0 8.9%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  /* position: relative; */
+  svg {
+    fill: #121212;
+  }
+  @media (max-width: 900px) {
+    height: 100%;
+    background: #514a7e;
+    svg {
+      fill: #fffdf5;
+    }
+  }
 
   > div {
     width: 100%;
