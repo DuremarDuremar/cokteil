@@ -9,8 +9,10 @@ export const Content = styled.header`
     fill: #121212;
   }
   @media (max-width: 900px) {
-    height: 100%;
     background: #514a7e;
+    height: 63px;
+    position: relative;
+    top: -63px;
     svg {
       fill: #fffdf5;
     }
@@ -33,15 +35,35 @@ export const Burger = styled.div`
     width: 36px;
     height: 36px;
   }
+  @media (max-width: 900px) {
+    grid-column: 4 span;
+    text-align: center;
+  }
 `;
 
 export const Avatar = styled.div`
   grid-column: 1 span;
   place-self: center;
   text-align: end;
+  @media (max-width: 900px) {
+    grid-column: 4 span;
+    text-align: center;
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
 `;
 export const Shop = styled.div`
   grid-column: 1 span;
   place-self: center;
   text-align: end;
+  @media (max-width: 900px) {
+    grid-column: 4 span;
+    text-align: center;
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
 `;

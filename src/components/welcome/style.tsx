@@ -3,7 +3,8 @@ import main_1 from "../../assets/main1.png";
 
 export const Content = styled.section`
   @media (max-width: 900px) {
-    background: url(${main_1});
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(${main_1});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
