@@ -9,6 +9,15 @@ export const Search = styled.div`
   white-space: nowrap;
   overflow-x: hidden;
   z-index: 2;
+  @media (max-width: 900px) {
+    height: 35px;
+    svg {
+      top: 5px;
+      left: 5px;
+      position: relative;
+    }
+  }
+
   input {
     margin-left: 19px;
     max-width: 21vw;
@@ -17,8 +26,12 @@ export const Search = styled.div`
     padding-bottom: 4px;
     color: #7d7d7d;
     background-color: #fffdf5;
-    font-size: 12px;
+    font-size: 15px;
     font-family: Roboto;
     font-weight: 100;
+    @media (max-width: 900px) {
+      border-bottom: none;
+      max-width: 100%;
+    }
   }
 `;

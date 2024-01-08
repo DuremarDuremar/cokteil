@@ -27,12 +27,14 @@ const Start: FC<IProps> = ({ res900 }) => {
       prof={prof}
       setProf={setProf}
       search={res900 ? search : null}
+      res900={res900}
     />,
     <Container mt={!res900 ? "0" : "50px"} padding={!res900 ? "0" : "0 8.9%"}>
       <Welcome
         burger={burger}
         res900={res900}
         search={!res900 ? search : null}
+        setBurger={setBurger}
       />
     </Container>,
   ].map((item, index) => <div key={index}>{item}</div>);

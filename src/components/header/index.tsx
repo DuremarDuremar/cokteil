@@ -12,13 +12,21 @@ interface IProps {
   prof: boolean;
   setProf: React.Dispatch<React.SetStateAction<boolean>>;
   search: JSX.Element | null;
+  res900: boolean;
 }
 
-const Header: FC<IProps> = ({ burger, setBurger, prof, setProf, search }) => {
+const Header: FC<IProps> = ({
+  burger,
+  setBurger,
+  prof,
+  setProf,
+  search,
+  res900,
+}) => {
   return (
     <Content>
       <Burger>
-        {burger ? (
+        {burger && res900 ? (
           <Nav setBurger={setBurger} />
         ) : (
           <SvgBurger onClick={() => setBurger(true)} />

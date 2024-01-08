@@ -4,6 +4,11 @@ export const Content = styled.div`
   /* height: 875px; */
   z-index: 2;
   position: absolute;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    background-color: #121212;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,6 +23,9 @@ export const List = styled.nav`
   width: 278px;
   height: 92vh;
   font-size: 14px;
+  @media (max-width: 900px) {
+    width: 208px;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -60,4 +68,7 @@ export const SubList = styled.ul`
   top: 0;
   left: 0;
   visibility: hidden;
+  @media (max-width: 900px) {
+    width: 208px;
+  }
 `;

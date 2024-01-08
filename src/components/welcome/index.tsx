@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import main_1 from "../../assets/main1.png";
 import main_2 from "../../assets/main2.png";
+import Nav from "../nav";
 import { ReactComponent as SvgArrow } from "../../assets/arrow.svg";
 import { Content, WelcomeBottom, WelcomeTop, SearchAdap } from "./style";
 
@@ -8,9 +9,18 @@ interface IProps {
   burger: boolean;
   res900: boolean;
   search: JSX.Element | null;
+  setBurger: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Welcome: FC<IProps> = ({ burger, res900, search }) => {
+const Welcome: FC<IProps> = ({ burger, res900, search, setBurger }) => {
+  if (burger && !res900) {
+    return (
+      <Content>
+        <Nav setBurger={setBurger} />
+      </Content>
+    );
+  }
+
   return (
     <Content>
       {search && <SearchAdap>{search}</SearchAdap>}
