@@ -16,12 +16,14 @@ export const Wrapper = styled.div`
   background: #fffdf5; */
 `;
 
-export const List = styled.nav`
+export const List = styled.nav<{
+  height: string;
+}>`
   background: #121212;
   color: #fffdf5;
   box-shadow: 0px 4px 20px 0px rgba(51, 51, 51, 0.05);
   width: 278px;
-  height: 92vh;
+  height: ${(props) => props.height};
   font-size: 14px;
   @media (max-width: 900px) {
     width: 208px;

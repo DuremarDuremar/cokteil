@@ -62,7 +62,10 @@ const Nav: FC<IProps> = ({ setBurger, search }) => {
     <Content>
       {search && <Top onClick={(e) => e.stopPropagation()}>{search}</Top>}
       <Wrapper>
-        <List onClick={(e) => e.stopPropagation()}>
+        <List
+          onClick={(e) => e.stopPropagation()}
+          height={search ? "80vh" : "90vh"}
+        >
           <div onClick={() => setBurger(false)}>
             <img src={logo} alt="logo" />
           </div>

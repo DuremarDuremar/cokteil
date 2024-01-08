@@ -10,6 +10,7 @@ export const Content = styled.section`
     background-position: center;
     position: relative;
     top: -20px;
+    height: 100vh;
   }
 `;
 export const WelcomeTop = styled.div`
