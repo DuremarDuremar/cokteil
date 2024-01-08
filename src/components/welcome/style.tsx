@@ -143,12 +143,14 @@ export const WelcomeBottom = styled.div`
     }
   }
 `;
-export const SearchAdap = styled.div`
+export const SearchAdap = styled.div<{
+  burger: boolean;
+}>`
   background-color: #fffdf5;
   width: 96%;
   height: 35px;
   border-radius: 10px;
   margin: 0px auto;
   position: relative;
-  top: 35px;
+  top: ${(props) => (props.burger ? "15px" : "30px")};
 `;

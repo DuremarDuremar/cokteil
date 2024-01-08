@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import logo from "../../assets/logo.png";
-import { Content, List, SubList, Wrapper } from "./style";
+import { Content, List, SubList, Wrapper, Top } from "./style";
 
 interface IProps {
   setBurger: React.Dispatch<React.SetStateAction<boolean>>;
+  search?: JSX.Element | null;
 }
 
-const Nav: FC<IProps> = ({ setBurger }) => {
+const Nav: FC<IProps> = ({ setBurger, search }) => {
   const navLi = [
     {
       main: "Женщинам",
@@ -59,6 +60,7 @@ const Nav: FC<IProps> = ({ setBurger }) => {
 
   return (
     <Content>
+      {search && <Top onClick={(e) => e.stopPropagation()}>{search}</Top>}
       <Wrapper>
         <List onClick={(e) => e.stopPropagation()}>
           <div onClick={() => setBurger(false)}>

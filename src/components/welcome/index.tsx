@@ -16,14 +16,17 @@ const Welcome: FC<IProps> = ({ burger, res900, search, setBurger }) => {
   if (burger && !res900) {
     return (
       <Content>
-        <Nav setBurger={setBurger} />
+        <Nav
+          search={<SearchAdap burger={burger}>{search}</SearchAdap>}
+          setBurger={setBurger}
+        />
       </Content>
     );
   }
 
   return (
     <Content>
-      {search && <SearchAdap>{search}</SearchAdap>}
+      {search && <SearchAdap burger={burger}>{search}</SearchAdap>}
       <WelcomeTop>
         <div>
           {res900 && (

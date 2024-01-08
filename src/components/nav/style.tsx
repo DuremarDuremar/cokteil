@@ -72,3 +72,18 @@ export const SubList = styled.ul`
     width: 208px;
   }
 `;
+
+export const Top = styled.div`
+  background: #514a7e;
+  height: 100px;
+  position: relative;
+  top: 20px;
+  padding-top: 15px;
+  div {
+    color: #fffdf5;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 87.305%;
+    text-align: center;
+  }
+`;
