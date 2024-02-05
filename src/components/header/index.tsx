@@ -4,7 +4,7 @@ import Profile from "../profile";
 import { ReactComponent as SvgBurger } from "../../assets/menu.svg";
 import { ReactComponent as SvgAvatar } from "../../assets/avatar.svg";
 import { ReactComponent as SvgShop } from "../../assets/shopping.svg";
-import { Burger, Content, Avatar, Shop } from "./style";
+import { Burger, Content, Avatar, Shop, AvatarLink } from "./style";
 
 interface IProps {
   burger: boolean;
@@ -39,12 +39,18 @@ const Header: FC<IProps> = ({
           e.stopPropagation();
         }}
       >
-        <SvgAvatar />
+        {res900 ? (
+          <SvgAvatar />
+        ) : (
+          <AvatarLink to="/log">
+            <SvgAvatar />
+          </AvatarLink>
+        )}
       </Avatar>
       <Shop>
         <SvgShop />
       </Shop>
-      {prof && <Profile />}
+      {prof && res900 && <Profile />}
     </Content>
   );
 };

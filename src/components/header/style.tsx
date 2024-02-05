@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Content = styled.header`
   height: 135px;
@@ -67,3 +68,5 @@ export const Shop = styled.div`
     }
   }
 `;
+
+export const AvatarLink = styled(NavLink)``;
