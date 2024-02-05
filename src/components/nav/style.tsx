@@ -88,4 +88,11 @@ export const Top = styled.div`
     line-height: 87.305%;
     text-align: center;
   }
+  h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 87%;
+    color: #fffdf5;
+  }
 `;

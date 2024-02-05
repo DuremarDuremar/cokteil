@@ -60,7 +60,12 @@ const Nav: FC<IProps> = ({ setBurger, search }) => {
 
   return (
     <Content>
-      {search && <Top onClick={(e) => e.stopPropagation()}>{search}</Top>}
+      {search && (
+        <Top onClick={(e) => e.stopPropagation()}>
+          <h4>Каталог</h4>
+          {search}
+        </Top>
+      )}
       <Wrapper>
         <List
           onClick={(e) => e.stopPropagation()}
